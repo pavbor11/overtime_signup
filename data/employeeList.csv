@@ -1,0 +1,541 @@
+Employee ID,User ID,Employee Name,Badge Barcode ID,Department ID,Employment Start Date,Employment Type,Employee Status,Manager Name,Temp Agency Code,Shift Pattern
+102195908,kchwali,"Chwalinska,Katarzyna",15296444,1299,Mon May 01 00:00:00 UTC 2023,AMZN,Active,"Sliz,Daria",,PLE7AIDG
+206372798,benarzdo,"Benarz,Dominik",15312623,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5CIDG
+206306910,swieemar,"Swietlikowska,Marta",15382510,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+101435681,michgali,"Gali,Michal",0302321,1712,Mon Sep 05 00:00:00 UTC 2016,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+202180984,dominder,"Dera,Dominika Teresa",14844653,1299,Tue Oct 01 00:00:00 UTC 2024,AMZN,Active,"Borucki,Aleksy Marcin",,PLC1-MGT
+102499273,borowtom,"Borowiec,Tomasz",11483972,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+206756337,markielq,"Kielar,Marcin",13338327,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+103043241,dorotai,"Iwanicka,Dorota",11884727,1299,Tue May 01 00:00:00 UTC 2018,AMZN,Active,"Sliz,Daria",,PLA5AIDG
+206448670,pawebato,"Batog,Pawel",12978241,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+206606068,onatalpa,"Pawlik,Natalia",12789418,1299,Thu Nov 13 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+203085992,glowackf,"Glowacki,Dawid",15100606,1712,Thu Mar 07 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",WJMA,
+101847935,joannd,"Drozdowska,Joanna",11793524,1299,Sat Apr 01 00:00:00 UTC 2017,AMZN,Active,"Sliz,Daria",,PLA5BIDG
+206705682,witoanie,"Witon,Aniela",13782906,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+205812412,zzhuanna,"Zhura,Anna",13534612,1299,Thu Aug 14 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5CMGT
+100323052,domaszb,"Domaszewska,Barbara Anna",0136115,1299,Mon Sep 22 00:00:00 UTC 2014,AMZN,Active,"Swirski,Piotr",,PLE7AMGT
+205505188,sylwjesi,"Jesionek,Sylwia",0223533,1299,Fri Jun 20 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+103252234,wodzikk,"Wodzik,Katarzyna Malgorzata",12087455,1299,Sat Sep 01 00:00:00 UTC 2018,AMZN,Active,"Sliz,Daria",,PLA5DIDG
+103876649,prazmow,"Prazmowska,Gabriela",13423568,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5AMGT
+102944149,mrrydz,"Rydz,Magdalena",12292470,1299,Mon Jul 01 00:00:00 UTC 2019,AMZN,Active,"Sliz,Daria",,PLE7AIDG
+104479136,mppogwiz,"Pogwizd,Michal",14382762,1299,Mon Sep 01 00:00:00 UTC 2025,AMZN,Active,"Borucki,Aleksy Marcin",,PLC1-MGT
+206249231,vbespalo,"Bespalova,Valeriia",12656101,1299,Fri Oct 10 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5CIDG
+105671018,allesyk,"Lesyk,Anita",12027179,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+109334969,palekcyr,"Cyruliczek,Aleksandra Sabina",14376118,1299,Wed Feb 17 00:00:00 UTC 2021,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+206705662,owojkrau,"Kraus,Wojciech",12850214,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+200641707,vsadoiry,"Sadova,Iryna",13349151,1299,Fri Sep 26 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5BIDG
+106351435,manuchv,"Manucharyan,Vladimir",12688665,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+205319281,mcyndro,"Cyndrowski,Michał",0229765,1712,Mon Sep 01 00:00:00 UTC 2025,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+204361701,kruhsvit,"Kruhlova,Svitlana",13667517,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5AMGT
+110750392,sljzelek,"Zelek,Slawa",11291447,1299,Wed Sep 15 00:00:00 UTC 2021,AMZN,Active,"Sliz,Daria",,PLE7AIDG
+108270577,klokoagn,"Klokosinska,Agnieszka Wladyslawa",12189595,1299,Thu Oct 08 00:00:00 UTC 2020,AMZN,Active,"Szymczak,Michal",,PLI7-IDG
+101098702,chajdzio,"Chajdziony,Lukasz",11357050,1712,Mon Feb 01 00:00:00 UTC 2016,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+205404984,amerorat,"Rorat-Kaczmarek,Amelia",12167853,1299,Fri Jun 06 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+202856382,kozalluk,"Kozal,Lukasz",15013486,1711,Thu Dec 21 00:00:00 UTC 2023,3PTY,Active,"Gali,Krzysztof Mikolaj",MOLT,
+206372794,bawaligo,"Waligora,Bartosz",11419527,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5CIDG
+206621822,andgnata,"Andrusiak,Natalia",11594881,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+109667973,madejar,"Madeja,Radoslaw",14736509,1712,Tue May 04 00:00:00 UTC 2021,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+201904838,avrkater,"Avramenko,Kateryna",14289644,1299,Fri Sep 01 00:00:00 UTC 2023,AMZN,Active,"Swirski,Piotr",,PLA5AMGT
+110054614,tomqkrec,"Krecz,Tomasz",12477322,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+103885639,igorfira,"Firak,Igor",0084859,1299,Fri Feb 01 00:00:00 UTC 2019,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+206756344,darikcie,"Cieslak,Daria",13495663,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+204362198,anblaszk,"Blaszkowska,Anna",12838960,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLE7AIDG
+206705658,dimianaf,"Dimitrova,Anastasiia",14178569,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5DMGT
+100362722,mporebsk,"Porebski,Maciej",15336611,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+110676810,hapalcze,"Palczewska,Hanna",11618749,1299,Wed Sep 08 00:00:00 UTC 2021,AMZN,Active,"Borowiecki,Pawel",,RT4978
+200631648,przerwan,"Przerwanek,Aleksandra",14573048,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+206199941,hjakublo,"Blonski,Jakub",13444354,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5CMGT
+104833906,martadud,"Duda,Marta",11630772,1299,Sun Dec 01 00:00:00 UTC 2019,AMZN,Active,"Malolepsza,Anna Magdalena",,DB1-0600
+205950608,marglodj,"Glod,Marek",11261494,1290,Mon Sep 08 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",CP,
+100363253,aradowsk,"Radowska,Anna Jadwiga",11000771,1299,Fri Apr 01 00:00:00 UTC 2016,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+110127775,malharbu,"Harbut,Malgorzata",13246416,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+206448673,matrojni,"Trojniak,Maksymilian",13965919,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLE7AIDG
+204362938,zaamelia,"Zakrzewska,Amelia",13838968,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+206705680,lazaneta,"Lachowska,Zaneta",0287840,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+106900566,milencis,"Ciszewska,Milena Anna",12687838,1299,Wed May 27 00:00:00 UTC 2020,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+102286845,kowallu,"Kowal,Lukasz Marek",0279648,1299,Sat Dec 01 00:00:00 UTC 2018,AMZN,Active,"Sliz,Daria",,PLA5CIDG
+202426547,socagata,"Socha,Agata",15392613,1299,Wed Oct 23 00:00:00 UTC 2024,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+206621825,swarlimv,"Swarlik,Marzena",12506278,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+110128107,hetnaran,"Hetnar,Anna",14093785,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+103226859,rydeck,"Rydecki,Przemyslaw",12895514,1299,Wed Sep 22 00:00:00 UTC 2021,AMZN,Active,"Sliz,Daria",,PLE7AIDG
+206448663,rornatow,"Ornatowski,Robert",0276593,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7AMGT
+106692531,sulkz,"Sulkowski,Zenon",12946989,1712,Mon Aug 10 00:00:00 UTC 2020,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+104931843,bpiechoc,"Piechocki,Bartosz",14939375,1299,Fri Sep 01 00:00:00 UTC 2023,AMZN,Active,"Szymczak,Michal",,RT4583
+206621817,ejoannow,"Owczarek,Joanna",13165462,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+102921043,chwirena,"Chwialkowska,Irena",12557313,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+102278958,lebekm,"Lebek-Andersz,Malwina",12238309,1299,Thu Feb 01 00:00:00 UTC 2018,AMZN,Active,"Swirski,Piotr",,PLA5BMGT
+206621820,slusaren,"Slusarenko,Magdalena",12736942,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+200926931,prokopkb,"Prokoptsova,Kateryna",12379219,1299,Mon Jan 09 00:00:00 UTC 2023,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+110676827,kosinsju,"Pawlak,Justyna",11056871,1299,Wed Sep 08 00:00:00 UTC 2021,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+206199931,natamorz,"Morze,Natalia",15073471,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5BMGT
+102716881,wojtmart,"Wojtczak,Marta Agnieszka",11652760,1299,Wed Oct 06 00:00:00 UTC 2021,AMZN,Active,"Sliz,Daria",,PLA5BIDG
+206371697,digfatal,"Fataliieva,Diana",12155183,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+206756343,strileny,"Strilets,Nina",14415993,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+203620022,miachfan,"MIACHYNA,ANASTASIIA",13959941,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+202586049,browarny,"Browarny,Tomasz",11857418,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+206307202,drashkoa,"Drashkovych,Anastasiia",0285487,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+108595719,hryelzbi,"Hrycak,Elzbieta Helena",12444206,1299,Wed Sep 15 00:00:00 UTC 2021,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+202295354,vlasolhq,"Vlasenko,Olha",12795696,1299,Fri Sep 19 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+206621816,sitmateu,"Sitko,Mateusz",12401464,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+102331976,wojnows,"Wojnowska,Weronika",12793440,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+100437453,dmitrzak,"Dmitrzak,Radoslaw",11085557,1299,Sun May 24 00:00:00 UTC 2015,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+203974249,mrochowi,"Rochowicz,Marcin Marek",13312110,1299,Mon Sep 09 00:00:00 UTC 2024,AMZN,Active,"Swirski,Piotr",,PLA5AMGT
+205375437,jbajeffr,"Barr,Jeffrey Howard",11611869,1290,Tue Jun 03 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+206372800,martdobo,"Dobras,Martyna",14454059,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+113106577,qtedawid,"Teneta,Dawid",14500149,1299,Fri Nov 07 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+107230416,wisnmoni,"Wisniowska,Monika",12358345,1299,Wed Jul 08 00:00:00 UTC 2020,AMZN,Active,"Borowiecki,Pawel",,RT4581
+100924619,pparado,"Paradowska,Patrycja Anna",13740031,1299,Tue Aug 01 00:00:00 UTC 2023,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+203892801,maznanna,"Mazur,Anna",11145188,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+203676149,rejgdani,"Rejtan,Daniel",12996583,1712,Thu Jul 11 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",MOLT,
+200758195,stockhan,"Stocka,Hanna",13206382,1299,Thu Aug 01 00:00:00 UTC 2024,AMZN,Active,"Swirski,Piotr",,PLA5AMGT
+203222040,tbanaszk,"Banaszkiewicz,Tadeusz",12076039,1712,Mon Apr 15 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",MOLT,
+205505194,andzelba,"Bartodziej,Andzelika",11794361,1299,Fri Jun 20 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+105485836,malgreic,"Reich,Malgorzata",15188180,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+106182441,eswilk,"Eswil,Krystian",0161131,1299,Fri Jun 20 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+204319260,luczkmar,"Luczkowiec,Marcin",14597474,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+206165186,jtybulcz,"Tybulczuk,Jakub",12756174,1711,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Gali,Krzysztof Mikolaj",OENS,
+102311900,rodziew,"Rodziewicz,Katarzyna",15246737,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+102762946,piasecn,"Piasecka,Natalia",11727967,1299,Thu Feb 01 00:00:00 UTC 2018,AMZN,Active,"Swirski,Piotr",,PLA5CMGT
+100862610,stachyw,"Stachyra,Wioletta Anna",11251904,1299,Fri Apr 01 00:00:00 UTC 2016,AMZN,Active,"Sliz,Daria",,PLA5DIDG
+102374257,pokrzr,"Pokrzepa,Robert",12587462,1299,Fri Oct 16 00:00:00 UTC 2020,3PTY,Active,"Kaminska,Natalia Kamila",OTHR,DE0-0800
+205881257,krzhschi,"Schillak,Krzysztof",15181470,1712,Wed Aug 27 00:00:00 UTC 2025,3PTY,Active,"Leszczyk,Hubert",A126,
+206372797,plutecka,"Plutecka-Domider,Karolina",15237139,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5BIDG
+108475283,dakizink,"Kizinkiewicz,Daniel",13121877,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5BIDG
+109610986,angmucha,"Mucha,Angelina",11472696,1299,Fri Aug 30 00:00:00 UTC 2024,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+205812416,polakrzy,"Krzyszkowska,Pola",14394691,1299,Thu Aug 14 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4979
+205547041,grmatenk,"Matenka,Grzegorz",14274051,1712,Wed Jun 25 00:00:00 UTC 2025,3PTY,Active,"Leszczyk,Hubert",MOLT,
+204361703,anazhada,"Zhadan,Anastasiia",12179912,1299,Fri Sep 19 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+103226934,udawa,"Udawa,Grzegorz",0083347,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+206306914,kasprzyt,"Kasprzyk,Tomasz",13190768,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7AMGT
+205736396,vitaltih,"Tihonovich,Vitaliy",11418250,1290,Fri Aug 01 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+200728639,sldorota,"Slowik,Dorota",14118958,1299,Fri Sep 26 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+206705660,stachube,"Stachowicz,Hubert",11068135,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+201641617,aawysopa,"Wysopal,Anna",15072303,1299,Sat Jun 01 00:00:00 UTC 2024,AMZN,Active,"Sliz,Daria",,W4A2LIDG
+109562214,markmacp,"Markiewicz,Maciej Michał",11336176,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7AMGT
+205859132,remuszbe,"Remus,Beata",15252016,1299,Fri Aug 22 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+203356240,ytorafal,"Rafalski,Tomasz",12091694,1712,Mon May 20 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",MOLT,
+206372801,nurkoani,"Nurkowska,Nika",15071331,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+202326502,lzoriana,"Konyk,Zoriana",14187725,1299,Fri Nov 01 00:00:00 UTC 2024,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+105582144,bhhanula,"Hanula,Blazej",13756854,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+205042633,vivsvita,"Vivsiany,Vitalii",14396014,1290,Sun Mar 16 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",TSSZ,
+206531768,dagmmics,"Michalczyk,Dagmara",13463556,1299,Fri Nov 07 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+204997162,istanihi,"Hiszpan,Stanislaw",12454884,1712,Tue Mar 04 00:00:00 UTC 2025,3PTY,Active,"Gali,Krzysztof Mikolaj",MOLT,
+204362967,amartlat,"Latka,Marta",12364956,1299,Mon Dec 01 00:00:00 UTC 2025,AMZN,Active,"Swirski,Piotr",,PLA5BMGT
+206756336,magdepaw,"Pawlik,Magdalena",15211903,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+206621824,latumilo,"Latuszek,Milosz",0279232,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+101726028,jmatejak,"Matejak,Joanna",12720804,1299,Mon Mar 01 00:00:00 UTC 2021,AMZN,Active,"Sliz,Daria",,PLA5DIDG
+200579807,kaczmpag,"Kaczmarczyk,Patryk",13566910,1299,Mon Jul 01 00:00:00 UTC 2024,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+201552211,waroksan,"Wasiak,Roksana",12837130,1299,Sat Mar 01 00:00:00 UTC 2025,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+101700038,jmariol,"Jankowska,Mariola Patrycja",11631098,1299,Wed Feb 01 00:00:00 UTC 2017,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+205776045,szypatrh,"Szynkiewicz,Patryk",12427301,1712,Wed Aug 13 00:00:00 UTC 2025,3PTY,Active,"Leszczyk,Hubert",GBRT,
+105593707,ewapiku,"Pikul,Ewa Marta",12666232,1299,Fri Apr 10 00:00:00 UTC 2020,AMZN,Active,"Borowiecki,Pawel",,RT4978
+204412834,moritzje,"Moritz,Ewa",14662507,1299,Thu Oct 31 00:00:00 UTC 2024,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+206756342,powierda,"Powierski,Daniel",15378189,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+101977854,babogdan,"Bar,Bogdan",13451836,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+203740956,denwalcz,"Walczak,Denis",14540894,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5AMGT
+206084382,dekatarz,"Depta,Katarzyna",14097134,1299,Fri Sep 19 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+206148704,ruslahai,"Haitska,Ruslana",0267748,1299,Fri Sep 26 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+103252114,bakczesl,"Bak,Czeslawa",0329768,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLE7AIDG
+202181025,lmrowcaa,"Mrowca,Aleksandra",11690380,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+205048325,ydobrovo,"Dobrovolskyi,Andrii",13781282,1290,Tue Mar 18 00:00:00 UTC 2025,3PTY,Active,"Golebiowski,Patryk Robert",JUNG,
+206705664,beatawas,"Wasik,Beata",12884125,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5DMGT
+100329835,magdalw,"Wyka,Magdalena",0359073,1299,Fri Sep 26 00:00:00 UTC 2014,AMZN,Active,"Borowiecki,Pawel",,PLF6-MGT
+206233248,ziebapii,"Zieba,Piotr",11892302,1290,Mon Oct 13 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+202989423,elsmarek,"Elsner,Marek",11787078,1290,Mon Feb 05 00:00:00 UTC 2024,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+203095990,kapryima,"Pryimak,Kamila",14927843,1299,Mon Apr 08 00:00:00 UTC 2024,AMZN,Active,"Sliz,Daria",,PLE7AIDG
+206346412,sznajdse,"Sznajder,Sebastian Daniel",13239627,1712,Wed Oct 22 00:00:00 UTC 2025,3PTY,Active,"Gali,Krzysztof Mikolaj",TSSZ,
+206621823,matyjang,"Matyjewicz,Angelika",14778288,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+205950597,lukarys,"Rysz,Lukasz",12704874,1290,Mon Sep 08 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",CP,
+206307204,skevaler,"Skelsara,Valeriia",13263320,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLE7AIDG
+203911904,daykandr,"Daykin,Andrew John",14402982,1290,Mon Sep 09 00:00:00 UTC 2024,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+110612153,dzmitrgp,"Paulau,Dzmitry",14056278,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,RT4581
+100656340,marekl,"Marek,Lucyna",0337867,1299,Sun Sep 20 00:00:00 UTC 2015,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+206199863,tmliberk,"Liberkowska,Marta",11589511,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+206306915,xpielelu,"PIELESIAK,LUKASZ",12988424,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+112668137,czwojdra,"Czwojdrak,Damian Tomasz",0221920,1712,Mon Jun 20 00:00:00 UTC 2022,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+206705661,agnirbzo,"Bzowy,Agnieszka",13789600,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+105062446,lkltw,"Litwin,Aleksandra",14644289,1299,Thu Aug 01 00:00:00 UTC 2024,AMZN,Active,"Borowiecki,Pawel",,RT4581
+103504661,klmykkd,"Kosmyk,Kateryna",13904847,1299,Fri Sep 19 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+201985557,mbizohon,"Bizon,Honorata",12324846,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLE7AIDG
+206199936,piaskodo,"Piaskowski,Dominik",14957531,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5AIDG
+206306912,vmariils,"Ilska,Maria",13041322,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+201161724,krzartur,"Krzywicki,Artur Tadeusz",13165441,1299,Wed Mar 01 00:00:00 UTC 2023,AMZN,Active,"Swirski,Piotr",,PLA5AMGT
+200612472,alicjtor,"Torzecka,Alicja",13995652,1299,Mon Jul 01 00:00:00 UTC 2024,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+110929512,karolsok,"Sokolowska,Karolina Anna",13456300,1299,Wed Sep 29 00:00:00 UTC 2021,AMZN,Active,"Borucki,Aleksy Marcin",,PLC1-MGT
+205812441,pmoliwia,"Malicka,Oliwia Janina",12466441,1299,Thu Aug 14 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5BIDG
+106968544,holyszko,"Holyszko,Karol",11953464,1299,Wed Jun 03 00:00:00 UTC 2020,AMZN,Active,"Sliz,Daria",,PLA5DIDG
+206756341,bednarna,"Bednarczyk,Natalia",14567072,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+206165193,hpiotols,"Olszak,Piotr",13298301,1711,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Gali,Krzysztof Mikolaj",OENS,
+102139324,martazur,"Zurawska,Marta",0338855,1299,Thu Oct 15 00:00:00 UTC 2020,AMZN,Active,"Szymczak,Michal",,PLI7-IDG
+201965773,matkryci,"Krycia,Mateusz",12220133,1299,Fri Nov 07 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+205486291,vewaantu,"Antuszewicz,Ewa",0213603,1299,Wed Jun 18 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5AMGT
+203635744,grzywnmi,"Grzywna,Michal",14423006,1712,Mon Jul 08 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",GBRT,
+107805779,marekoma,"Komarnicki,Marek",13499779,1299,Fri Aug 29 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+203445820,macbrzoz,"Brzozowski,Maciej",12694981,1299,Fri Sep 26 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+204603326,axmichal,"Michalczyk,Agnieszka",14817822,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5BIDG
+100935013,slazykk,"Slazyk,Karolina",0173312,1299,Fri Apr 01 00:00:00 UTC 2016,AMZN,Active,"Szymczak,Michal",,PLI7-IDG
+104564553,kurkatar,"Kur,Katarzyna Maria",11922603,1299,Tue Oct 01 00:00:00 UTC 2019,AMZN,Active,"Runo,Aleksandra Anna",,PLA5DIDG
+101401315,zurynp,"Zuryńska,Paulina",12955848,1299,Tue Aug 01 00:00:00 UTC 2023,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+100344046,durlejm,"Rondomanska-Durlej,Magdalena",0244120,1299,Tue Oct 07 00:00:00 UTC 2014,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+203680768,kyarosll,"Kopanytsia,Yaroslava",14910203,1299,Fri Jul 12 00:00:00 UTC 2024,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+203222228,cynmarek,"Cyniak,Marek",15375019,1712,Mon Apr 15 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",MOLT,
+206372802,adwesoli,"Wesolowski,Adam",12498959,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+102972892,shumavet,"Shumavets,Nastassia",14339469,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5BIDG
+205011731,imamoraw,"Morawski,Mariusz",13275830,1712,Mon Mar 10 00:00:00 UTC 2025,3PTY,Active,"Leszczyk,Hubert",MOLT,
+110183577,aniadul,"Dul,Ania Marta",15013738,1299,Fri Jul 18 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5DIDG
+203205326,skogutmi,"Kogut,Michal",13024853,1712,Fri Apr 12 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",MOLT,
+103840140,przybv,"Przybyla,Violetta",11821502,1299,Fri Mar 01 00:00:00 UTC 2019,AMZN,Active,"Sliz,Daria",,PLA5CIDG
+202425209,bagiljus,"Baginska,Justyna",12691186,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5BMGT
+102139444,monrybka,"Rybka,Monika",12094938,1299,Fri Sep 01 00:00:00 UTC 2017,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+206756345,kuliemar,"Kulik,Marek",13998499,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+206306907,ogulewic,"Ogulewicz,Tomasz",11212489,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7AMGT
+100498994,juziukm,"Juziuk,Marzena",11124555,1299,Sun May 03 00:00:00 UTC 2015,AMZN,Active,"Borucki,Aleksy Marcin",,PLA5AMGT
+101934360,cegiels,"Cegielska,Stefania",11885099,1299,Sun Sep 01 00:00:00 UTC 2019,AMZN,Active,"Swirski,Piotr",,PLA5AMGT
+205425555,robesikd,"Sikora,Robert",0221099,1712,Tue Jun 10 00:00:00 UTC 2025,3PTY,Active,"Wajner,Tomasz",WJMA,
+204412837,gulkadom,"Gulka,Iwona",15113946,1299,Thu Oct 31 00:00:00 UTC 2024,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+203910193,augustkk,"Augustyniak,Kamil",11348482,1290,Sun Sep 01 00:00:00 UTC 2024,3PTY,Active,"Kaminska,Natalia Kamila",CP,
+112927763,odoroarl,"Odorowska,Arlena",12684419,1299,Mon Sep 01 00:00:00 UTC 2025,AMZN,Active,"Borowiecki,Pawel",,RT4581
+102508968,goncer,"Goncerz,Dariusz",11172290,1299,Thu Mar 01 00:00:00 UTC 2018,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+102972869,krolcz,"Krolczyk,Natalia",14184369,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7AMGT
+206307199,miremisz,"Remiszewski,Miroslaw",0161527,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+206448659,jacdradr,"Dradrach,Jacek",0041060,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+203932031,hmatusew,"Matusewicz,Henryk",14276316,1207,Wed Sep 04 00:00:00 UTC 2024,3PTY,Active,"Golebiowski,Patryk Robert",MMA,
+206200012,jakuqrud,"Rudnicki,Jakub",14312758,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5DMGT
+111115356,zxalbina,"Zahladko,Albina",12176221,1299,Sun May 01 00:00:00 UTC 2022,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+103755603,brychkan,"Brychka,Nataliia",11500004,1299,Fri Sep 19 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLC1-IDG
+101509536,lczerni,"Czerniakiewicz,Lukasz",14936082,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+100555802,kczeslaw,"Kaczmarek,Czeslaw",11396104,1299,Sat Oct 01 00:00:00 UTC 2016,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+104924788,mkkrocz,"Kroczek,Marcin",14686319,1299,Fri Jul 11 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+206190692,lmariuad,"Adamowicz,Mariusz",13489467,1290,Mon Oct 06 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+206621826,edmytrof,"Mytrofanov,Eduard",14805491,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+206705668,kselisni,"Lisniak,Kseniia",13235467,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5CMGT
+103975185,korniien,"Korniienko,Iryna",15210072,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+203713853,skarwowh,"Karwowski,Sebastian",13924550,1290,Mon Jul 22 00:00:00 UTC 2024,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+205048326,sebantoy,"Antolak,Sebastian",15360539,1290,Tue Mar 18 00:00:00 UTC 2025,3PTY,Active,"Golebiowski,Patryk Robert",JUNG,
+108206509,hnatenki,"Hnatenko,Iryna",15125116,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5BMGT
+104931844,delijep,"Delijewska,Paulina",14941458,1299,Fri Sep 01 00:00:00 UTC 2023,AMZN,Active,"Szymczak,Michal",,RT4583
+107534515,natalidy,"Dyrda,Natalia Ewa",12799026,1299,Thu Jul 21 00:00:00 UTC 2022,AMZN,Active,"Swirski,Piotr",,PLA5DMGT
+205018662,fahenryk,"Falkowski,Henryk",13781066,1712,Mon Mar 10 00:00:00 UTC 2025,3PTY,Active,"Pawlik,Pawel Piotr",WJMA,
+204506537,zgsylwia,"Zgrzebnicka-Janyst,Sylwia",14234501,1299,Thu Aug 14 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLF6-MGT
+109542405,pawpawli,"Pawlik,Pawel Piotr",14601305,1712,Mon Apr 12 00:00:00 UTC 2021,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+204884035,pawelcfr,"Frankiewicz,Pawel",12091985,1712,Thu Jan 30 00:00:00 UTC 2025,3PTY,Active,"Wajner,Tomasz",HPIN,
+106838890,bojabeat,"Bojakowska,Beata",12733708,1299,Thu Oct 15 00:00:00 UTC 2020,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+113224035,goraluk,"Goral,Lukasz Jozef",0124483,1712,Mon Dec 19 00:00:00 UTC 2022,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+206222601,jaroscza,"Czarnecki,Jaroslaw",13142301,1712,Wed Oct 08 00:00:00 UTC 2025,3PTY,Active,"Leszczyk,Hubert",MMA,
+204094487,kmarynac,"Kostenko,Maryna",14011490,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5AIDG
+105116937,pawswide,"Swider,Pawel",14129764,1299,Wed Oct 13 00:00:00 UTC 2021,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+101830318,sodorota,"Soltysik,Dorota Beata",11772377,1299,Mon May 01 00:00:00 UTC 2017,AMZN,Active,"Sliz,Daria",,PLA5CIDG
+206148722,sorokoli,"Sorokolita,Antonina",15268508,1299,Fri Sep 26 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+105851592,nwiezik,"Wiezik,Nicola",12949766,1299,Fri May 01 00:00:00 UTC 2020,AMZN,Active,"Sliz,Daria",,PLA5AIDG
+103952568,kozoskar,"Koziol,Oskar",14337232,1290,Tue Jun 10 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+204996065,pasvdami,"Paszkiewicz,Damian",15222570,1290,Tue Mar 11 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+205859135,jozaluck,"Zalucka,Joanna",13615689,1299,Fri Aug 22 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+111500619,hryshzoi,"Hryshchuk,Zoia",12811918,1299,Fri Sep 26 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+206371695,densalen,"Salenko,Denys",12253982,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+205153394,mdariusu,"Michalak,Dariusz",12264603,1712,Mon Apr 14 00:00:00 UTC 2025,3PTY,Active,"Gali,Krzysztof Mikolaj",MOLT,
+201521821,malkmiec,"Kmiecik,Malgorzata",14001094,1299,Mon Jun 19 00:00:00 UTC 2023,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+110184172,szczukia,"Szczukiecka,Anna",15297120,1299,Mon May 01 00:00:00 UTC 2023,AMZN,Active,"Sliz,Daria",,PLE7AIDG
+200758091,cicimoni,"Cichocka,Monika",12823992,1299,Sun Sep 01 00:00:00 UTC 2024,AMZN,Active,"Borowiecki,Pawel",,RT4581
+206705671,tomaceln,"Celnik,Tomasz",13820870,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+202996305,mateuogl,"Gluszek,Mateusz",12751919,1290,Wed Jan 31 00:00:00 UTC 2024,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+102179659,jacekonc,"Koncur,Jacek",15213798,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+206448674,domjuchi,"Juchimiuk,Dominik",15221355,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+201322578,stkarkut,"Karkut,Stanisława Krystyna",12542336,1299,Mon Apr 01 00:00:00 UTC 2024,AMZN,Active,"Borowiecki,Pawel",,RT4581
+202501687,gasimalg,"Gasior,Malgorzata",14042946,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7AMGT
+111057981,lamalgor,"Latkowska,Malgorzata Zofia",13371499,1299,Wed May 01 00:00:00 UTC 2024,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+205400985,sakowjak,"Sakowski,Jakub",14498465,1712,Mon Jun 09 00:00:00 UTC 2025,3PTY,Active,"Wajner,Tomasz",JUCH,
+106900570,jggawel,"Gawel,Joanna",12687842,1299,Wed May 27 00:00:00 UTC 2020,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+108400957,ewojciko,"Wojcikowska,Ewa",11767772,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+206756335,cjakubas,"Jakubaszek-Misiuna,Justyna",11841831,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+110930612,czacharc,"Zacharczuk,Marcelina",11793786,1299,Wed Sep 29 00:00:00 UTC 2021,AMZN,Active,"Borucki,Aleksy Marcin",,PLC1-MGT
+206621818,wnsabina,"Weglarz,Sabina",13609299,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+104375181,mielnikt,"Mielnik,Tomasz Waldemar",11819886,1712,Mon Apr 01 00:00:00 UTC 2019,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+112810707,ciopatry,"Ciochon,Patrycja Katarzyna",12637094,1299,Thu Jul 21 00:00:00 UTC 2022,AMZN,Active,"Swirski,Piotr",,PLA5CMGT
+206705681,poplaame,"Poplawska,Amelia",15338860,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+203490357,vibielyk,"Bielykh,Viktoriia",11856846,1299,Wed Oct 01 00:00:00 UTC 2025,AMZN,Active,"Sliz,Daria",,PLA5DIDG
+206372793,izabsiek,"Siekierzycka-Stachowicz,Izabella",11471396,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+104833842,kmteus,"Kowalewicz,Mateusz",11930951,1299,Thu Nov 13 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+108270579,agnpiotr,"Piotrowska,Agnieszka",13206264,1299,Thu Oct 08 00:00:00 UTC 2020,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+206200640,treillia,"Tretiakov,Illia",13077573,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5DIDG
+102886457,gierynm,"Gieryn,Malgorzata",12943663,1299,Wed Sep 22 00:00:00 UTC 2021,AMZN,Active,"Sliz,Daria",,PLA5DIDG
+206200010,nikhoffm,"Hoffmann,Nikola",12626266,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5BIDG
+102311854,jsstrecw,"Streciwilk,Jacek",12271940,1299,Sun Oct 01 00:00:00 UTC 2017,AMZN,Active,"Szymczak,Michal",,RT4583
+100890636,traczr,"Tracz,Renata",11282026,1299,Tue Mar 01 00:00:00 UTC 2016,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+106172015,charkom,"Charko,Marzena",13292660,1299,Mon Jun 01 00:00:00 UTC 2020,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+109802831,majchsan,"Majchrzak,Sandra",13356058,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7AMGT
+206084277,camelzyw,"Zywica,Amelia",12217731,1299,Fri Sep 19 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+112810709,juliamaa,"Marek,Julia",12104782,1299,Thu Jul 21 00:00:00 UTC 2022,AMZN,Active,"Malolepsza,Anna Magdalena",,DB1-0600
+101337309,cffrancz,"Franczak,Celina",11225943,1299,Wed Feb 01 00:00:00 UTC 2017,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+206306909,hmroczko,"Mroczkowska,Patrycja",11800455,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7AMGT
+204393111,milkowma,"Milkowski,Mateusz",13977985,1712,Tue Oct 29 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",OENS,
+110942428,kaczkacp,"Kaczmarski,Kacper",0101219,1712,Mon Jul 24 00:00:00 UTC 2023,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+204329286,krysfpio,"Krystosiak,Piotr",12206119,1712,Tue Oct 22 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",MMA,
+203446832,ofigueic,"Figueiredo,Carlos",12671929,1290,Tue Jul 09 00:00:00 UTC 2024,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+110297601,pastuska,"Pastuszka,Katarzyna Ewelina",12458129,1299,Wed Jul 21 00:00:00 UTC 2021,AMZN,Active,"Swirski,Piotr",,PLA5AMGT
+101137589,goralp,"Goral,Przemyslaw",11398414,1712,Mon Mar 21 00:00:00 UTC 2016,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+205048323,hchalupk,"Chalupka,Arkadiusz",11135736,1290,Tue Mar 18 00:00:00 UTC 2025,3PTY,Active,"Golebiowski,Patryk Robert",JUNG,
+206148706,yevhmiti,"Mitiakov,Yevhenii",12340308,1299,Fri Sep 26 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+100628321,matysm,"Boczula-Matyszczyk,Monika Zofia",15370246,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLE7AIDG
+105522795,jzzasepa,"Zasepa,Justyna Julia",12588158,1299,Wed Jan 15 00:00:00 UTC 2020,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+100626865,kviolett,"Konstanciak,Violetta",0095252,1299,Sun Sep 20 00:00:00 UTC 2015,AMZN,Active,"Borucki,Aleksy Marcin",,PLC1-MGT
+102762948,wantochw,"Wantoch,Weronika",11728003,1299,Thu Feb 01 00:00:00 UTC 2018,AMZN,Active,"Sliz,Daria",,PLA5DIDG
+112810705,patrycnb,"Nowak,Patrycja",11367423,1299,Thu Jul 21 00:00:00 UTC 2022,AMZN,Active,"Sliz,Daria",,PLF6-IDG
+101843123,kamisylw,"Kaminska Jr,Sylwia Anna",15368789,1299,Thu Jul 21 00:00:00 UTC 2022,AMZN,Active,"Swirski,Piotr",,PLA5AMGT
+101547073,gryglewm,"Gryglewicz,Malgorzata",11466209,1299,Wed Feb 01 00:00:00 UTC 2017,AMZN,Active,"Sliz,Daria",,PLE7AIDG
+101196538,ciszes,"Ciszewska,Sylwia Joanna",13053881,1299,Fri Oct 25 00:00:00 UTC 2024,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+206199938,marepast,"Pastuch,Marek",14651151,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5BIDG
+101574369,szulz,"Szulc,Zofia",11496281,1299,Wed Mar 01 00:00:00 UTC 2017,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+100505410,kantorsz,"Kantorski,Zbigniew",13003836,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+102635082,tetid,"Dekhtiarova,Tetiana",11327812,1299,Mon Feb 01 00:00:00 UTC 2021,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+205286588,demorena,"de Moraes Goulart,Renata",14091046,1290,Tue May 20 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+205548570,patryygi,"Gicala,Patryk",12415026,1290,Wed Jul 02 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+200521926,agkotars,"Kotarska,Agnieszka",14816255,1299,Thu Aug 01 00:00:00 UTC 2024,AMZN,Active,"Borowiecki,Pawel",,RT4581
+205048324,rotymche,"Tymchenko,Roman",11069621,1290,Tue Mar 18 00:00:00 UTC 2025,3PTY,Active,"Golebiowski,Patryk Robert",JUNG,
+103998194,qkkrzhs,"Krzysztofik,Katarzyna",13044586,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+206531767,roznidju,"Roznicka,Julia",14256481,1299,Fri Nov 07 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+206448658,grzejabl,"Jablonski,Grzegorz",0234884,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7AMGT
+205048327,vadympol,"Polishchuk,Vadym",0156530,1290,Tue Mar 18 00:00:00 UTC 2025,3PTY,Active,"Golebiowski,Patryk Robert",JUNG,
+206306937,ogojoann,"Ogonowska,Joanna",13437646,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7AMGT
+204227487,xnkacper,"Nawojski,Kacper",13604190,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5DMGT
+101327208,kholowko,"Holowko,Katarzyna",12149339,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+102482101,skibicke,"Skibicka,Elzbieta Maria",0311764,1299,Thu Feb 01 00:00:00 UTC 2018,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+112810710,matwojna,"Wojnarski,Sebastian",13187706,1299,Thu Jul 21 00:00:00 UTC 2022,AMZN,Active,"Sliz,Daria",,PLA5BIDG
+200443605,lstkamil,"Stankiewicz,Kamila Bernadeta",11857276,1299,Thu Aug 14 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5CMGT
+203713709,brozanss,"Rozanska,Barbara",14447934,1299,Sat Nov 01 00:00:00 UTC 2025,AMZN,Active,"Swirski,Piotr",,PLA5AMGT
+103510926,hlleszcz,"Leszczyk,Hubert",11650531,1712,Mon Aug 06 00:00:00 UTC 2018,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+109048528,pabadura,"Badura,Patryk",12741951,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+204934866,mikolahe,"Herec,Mikolaj",14215196,1712,Mon Feb 24 00:00:00 UTC 2025,3PTY,Active,"Leszczyk,Hubert",A126,
+105619090,jwalczyk,"Walczyk,Jacek",12229641,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+101611769,spychpat,"Sitek,Patrycja",14377062,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5DIDG
+201845204,pikelzbi,"Pikor,Elzbieta Marta",11916770,1299,Mon Jul 01 00:00:00 UTC 2024,AMZN,Active,"Runo,Aleksandra Anna",,PLB1-MGT
+206756338,goldedyt,"Goldyn,Edyta",11089110,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+203222041,ldospial,"Dospial,Robert",14363028,1712,Mon Apr 15 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",MOLT,
+110164413,khavlady,"Kharchenko,Vladyslav",0002840,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5AIDG
+206371702,voinyuli,"Voina,Yuliia",12102361,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+110929513,zwiktdzw,"Dzwigniewska,Wiktoria",13561266,1299,Wed Sep 29 00:00:00 UTC 2021,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+201272222,kseniimo,"Motuzka,Kseniia",13147162,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+113062199,matnrysa,"Rysak,Mateusz",12864456,1299,Fri Sep 01 00:00:00 UTC 2023,AMZN,Active,"Sliz,Daria",,PLA5AIDG
+102719373,zasadama,"ZASADA,MARIUSZ",11512238,1299,Tue Oct 10 00:00:00 UTC 2017,3PTY,Active,"Gali,Krzysztof Mikolaj",OTHR,DE0-0830
+105618063,iskoczen,"Skoczen,Iwona",12059696,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5AIDG
+107761979,pastuszc,"Pastuszczak,Artur Bogdan",13803466,1299,Sun Jun 01 00:00:00 UTC 2025,AMZN,Active,"Sliz,Daria",,PLA5CIDG
+102667800,szulmoni,"Szulc,Monika",11409243,1299,Thu Feb 01 00:00:00 UTC 2018,AMZN,Active,"Swirski,Piotr",,PLA5CMGT
+204052058,haykella,"Hayes,Kelly",11897310,1207,Thu Sep 26 00:00:00 UTC 2024,3PTY,Active,"Skelton,Matthew",MMA,
+110930574,pkrmagda,"Krawczyk-Opasała,Magdalena",11793155,1299,Fri Sep 01 00:00:00 UTC 2023,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+108448703,cyprisar,"Sarapata,Cyprian",14554237,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7AMGT
+100353239,boguslad,"Dworak,Boguslawa Maria",0023186,1299,Mon Feb 28 00:00:00 UTC 2022,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+101198161,olejnij,"Olejnik,Justyna",15379883,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+107108198,adaaneta,"Jasinska,Aneta Sandra",13373550,1299,Fri Jul 11 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+203837526,kasprzju,"Kasprzyk,Justyna",11787199,1299,Fri Aug 16 00:00:00 UTC 2024,3PTY,Active,"Swirski,Piotr",ADEC,PLA5DMGT
+206084384,anastbor,"Borysova,Anastasiia",13889165,1299,Fri Sep 19 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+203095989,pryioleg,"Pryimak,Oleg",14633467,1299,Fri Mar 29 00:00:00 UTC 2024,AMZN,Active,"Sliz,Daria",,PLA5AIDG
+203713713,mwiktorp,"Piekarz,Wiktoria Weronika",14182826,1299,Sat Nov 01 00:00:00 UTC 2025,AMZN,Active,"Swirski,Piotr",,PLA5AMGT
+206371698,tsihelma,"Tsihelman,Natalia",11755885,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+206148033,damtprad,"Pradzynski,Damian",13048487,1299,Fri Sep 26 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+205950601,krzywkow,"Kowalski,Krzysztof",14619905,1290,Mon Sep 08 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",CP,
+105052447,matuszar,"Matuszewski,Arkadiusz",11518490,1712,Mon Sep 02 00:00:00 UTC 2019,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+206103816,bejeanfr,"Belenus,Jean Francois",15259788,1290,Mon Sep 22 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+200943378,wiesiulo,"Swiesiulska,Oliwia",14625302,1299,Sat Jun 01 00:00:00 UTC 2024,AMZN,Active,"Swirski,Piotr",,PLA5AMGT
+203992813,eweladam,"Adamczyk,Ewelina",15115138,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+206705666,ptaagnia,"Ptasinska,Agnieszka",14553280,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5AIDG
+205048322,kirnievr,"Kirniev,Ruslan",11016962,1290,Tue Mar 18 00:00:00 UTC 2025,3PTY,Active,"Golebiowski,Patryk Robert",JUNG,
+103552521,marszew,"Szewczyk,Marcin",11415997,1299,Sat Dec 01 00:00:00 UTC 2018,AMZN,Active,"Swirski,Piotr",,PLA5DMGT
+201946828,alicjach,"Chmielewska,Alicja",13222354,1299,Thu Aug 01 00:00:00 UTC 2024,AMZN,Active,"Szymczak,Michal",,RT4583
+103252262,rokinga,"Rosa,Kinga",14605266,1299,Fri Aug 22 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+204052076,chcavene,"Caveney,Chris",13518442,1207,Thu Sep 26 00:00:00 UTC 2024,3PTY,Active,"Skelton,Matthew",MMA,
+203055525,olejnada,"Olejniczak,Adam",13627219,1290,Wed Feb 28 00:00:00 UTC 2024,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+200469054,czemonit,"Czernicka,Monika Anna",0298853,1299,Fri Mar 29 00:00:00 UTC 2024,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+202415680,plukasir,"Lukasiewicz,Paweł Maciej",13850051,1299,Mon Nov 13 00:00:00 UTC 2023,AMZN,Active,"Sliz,Daria",,PLA5AIDG
+206706563,matpydyc,"Pydych,Mateusz",0353997,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5AIDG
+101363964,michonb,"Michon,Bartosz",13124895,1299,Thu Aug 01 00:00:00 UTC 2024,AMZN,Active,"Szymczak,Michal",,RT4583
+205404987,marstelm,"Stelmaszek,Marta",13078398,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+206306935,nrejowsk,"Rejowska,Natalia",12208240,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+100325758,ryszardl,"Lisowski,Ryszard",0192015,1712,Wed Sep 24 00:00:00 UTC 2014,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+203886660,kacpmari,"Kacprzynski,Mariusz",14953665,1290,Wed Aug 28 00:00:00 UTC 2024,3PTY,Active,"Golebiowski,Patryk Robert",WURT,
+204238571,giedrewi,"Giedrewicz,Martyna",11771303,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5DMGT
+205242814,krzyrafa,"Krzyzaniak,Rafal",11165506,1712,Mon May 05 00:00:00 UTC 2025,3PTY,Active,"Gali,Krzysztof Mikolaj",MMA,
+206705678,matehali,"Halibozek,Mateusz",12235411,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+200758090,cgrzegoh,"Cichocki,Grzegorz Tomasz",12957719,1299,Sun Sep 01 00:00:00 UTC 2024,AMZN,Active,"Borowiecki,Pawel",,RT4581
+110702429,kowaliag,"Kowalik,Agnieszka",12218798,1299,Wed Sep 08 00:00:00 UTC 2021,AMZN,Active,"Szymczak,Michal",,RT4979
+206448665,tomhalud,"Haluk,Tomasz",13711555,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+101028930,monzurek,"Zurek,Monika",0334163,1299,Fri Apr 01 00:00:00 UTC 2016,AMZN,Active,"Sliz,Daria",,PLA5DIDG
+102972730,jakurosz,"Roszkowski,Jakub",14173326,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLE7AIDG
+104023076,rybmarci,"Rybicki,Marcin",12897626,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+100389761,cuklaa,"Wiklo,Angelika Joanna",11030360,1299,Sun Feb 08 00:00:00 UTC 2015,AMZN,Active,"Swirski,Piotr",,PLE7AMGT
+101700693,mwwiezik,"Wiezik,Monika ewa",11630948,1299,Sun Jul 01 00:00:00 UTC 2018,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+101134148,wrobrafa,"wroblewski,Rafal Arkadiusz",11394813,1299,Sat Oct 01 00:00:00 UTC 2016,AMZN,Active,"Sliz,Daria",,PLA5AIDG
+206408706,klekatar,"Kleszcz,Katarzyna",13029845,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+102402790,prrachu,"Rachuna,Patrycja",0277563,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+202969470,lukasmba,"Bartoszczyk,Lukasz",14868881,1290,Sun Mar 16 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",TSSZ,
+206306913,alpiotro,"Piotrowska,Alicja",12004537,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+106342524,pawelkar,"Pawelka,Radoslaw",11930194,1712,Mon Jul 24 00:00:00 UTC 2023,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+204773694,wileslaw,"Wierzbicki,Leslaw",0042506,1712,Mon Aug 18 00:00:00 UTC 2025,3PTY,Active,"Gali,Krzysztof Mikolaj",WURT,
+204402794,kurzelan,"Kurzela,Anna",12403482,1299,Fri Aug 22 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+107392549,tkampas,"Kampas,Thomas",12168650,1290,Fri Jul 24 00:00:00 UTC 2020,3PTY,Active,"Kaczmarek,Tomasz",HUNK,
+202501599,tasuliko,"Sulikowska-Capenko,Tetyana",14733653,1299,Fri Jul 11 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5AMGT
+204298268,wacstenu,"Wach,Stenia",14463980,1299,Fri Sep 19 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+203222042,derczyng,"Derczynski,Karol",12031517,1712,Mon Apr 15 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",MOLT,
+202696767,tarasyau,"Taresevich,Yauheni",15288659,1290,Mon Oct 27 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+202753942,pabrafre,"Abraham,Freddy",13953966,1290,Tue Nov 28 00:00:00 UTC 2023,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+201947250,matefbie,"Bieganowski,Mateusz",14057109,1712,Mon Sep 01 00:00:00 UTC 2025,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+104095216,wiecroma,"Wieckowski,Roman",12039529,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+204219582,natlasta,"Lastavetskaja,Natallia",12838004,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+108633594,bartynag,"Bartyna,Gabriela",0351004,1299,Wed Oct 01 00:00:00 UTC 2025,AMZN,Active,"Sliz,Daria",,PLA5CIDG
+201763638,wbiemate,"Bielecki,Mateusz",11603309,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+104074229,margrzyw,"Grzywaczewska,Marta",14616483,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLE7AIDG
+101472382,remagnu,"Magnus,Renata",0067883,1299,Thu Dec 01 00:00:00 UTC 2016,AMZN,Active,"Swirski,Piotr",,PLA5CMGT
+101202232,stolarj,"Stolarczyk,Jolanta",11287296,1299,Tue Nov 01 00:00:00 UTC 2016,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+109562215,bajcjess,"Bajcarz,Jessica",13643571,1299,Fri Aug 01 00:00:00 UTC 2025,AMZN,Active,"Swirski,Piotr",,PLA5CMGT
+100543436,wladyslp,"Pawlak,Wladyslaw Dawid",11172201,1712,Mon Mar 02 00:00:00 UTC 2015,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+204227915,biriuold,"Biriukova,Olena",12329511,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+202415683,marepryi,"Pryimak,Marek",14851138,1299,Mon Nov 13 00:00:00 UTC 2023,AMZN,Active,"Sliz,Daria",,PLA5AIDG
+204172127,juradzik,"Radzikowska,Julia Halina",12129279,1299,Tue Oct 01 00:00:00 UTC 2024,AMZN,Active,"Swirski,Piotr",,PLA5CMGT
+201946829,senczyna,"Senczyna,Dawid Grzegorz",14355940,1299,Mon Jul 01 00:00:00 UTC 2024,AMZN,Active,"Szymczak,Michal",,RT4979
+106651758,mwwypyc,"Wypych,Monika Izabela",12809113,1299,Tue Sep 01 00:00:00 UTC 2020,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+202415644,wojciezt,"Zyper,Wojciech",13101902,1299,Mon Nov 13 00:00:00 UTC 2023,AMZN,Active,"Swirski,Piotr",,PLA5AMGT
+200926930,robqlask,"Laskarzewski,Robert",12977556,1299,Mon Oct 06 00:00:00 UTC 2025,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+102947211,rumibogn,"Rumianowska,Bogna",12727873,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLE7AIDG
+112000051,knwielow,"Wielowski,Kamil Marek",13839963,1299,Wed Jan 19 00:00:00 UTC 2022,AMZN,Active,"Swirski,Piotr",,PLA5AMGT
+111027659,sgsenczy,"Senczyna,Sylwia",14075521,1299,Wed Oct 06 00:00:00 UTC 2021,AMZN,Active,"Borucki,Aleksy Marcin",,PLC1-MGT
+206621828,vlebeden,"Lebedenko,Vitalii",11228448,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+113062193,laszklka,"Laszkiewicz,Kaja",13763541,1299,Fri Sep 01 00:00:00 UTC 2023,AMZN,Active,"Szymczak,Michal",,RT4979
+206371696,natazmar,"Marchenko,Natalia",14323780,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+110836691,gajeajsz,"Gajewska,Ajsza",11667339,1299,Wed Sep 22 00:00:00 UTC 2021,AMZN,Active,"Sliz,Daria",,PLF6-IDG
+103690584,pawlakar,"Pawlak,Karolina",12632761,1299,Fri Aug 29 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+205044461,larthurt,"Leeman,Arthur",14345533,1290,Tue Mar 18 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+204212081,oksaftra,"Trach,Oksana",11682370,1299,Fri Jul 25 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+203205317,koguthen,"Kogut,Henryk",13578607,1712,Fri Apr 12 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",MOLT,
+205025651,jugrabow,"Grabowska,Justyna",13587890,1290,Sun Mar 16 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+202746013,ducjacep,"Duch,Jacek",13936835,1290,Tue Nov 28 00:00:00 UTC 2023,3PTY,Active,"Kaminska,Natalia Kamila",CP,
+204997163,vadrisos,"Sosnowski,Adrian",12188441,1712,Tue Mar 04 00:00:00 UTC 2025,3PTY,Active,"Gali,Krzysztof Mikolaj",MOLT,
+106900565,tomsylwi,"Tomczyk,Sylwia",12687536,1299,Wed May 27 00:00:00 UTC 2020,AMZN,Active,"Borucki,Aleksy Marcin",,PLC1-MGT
+107230741,opasala,"Opasala,Maciej",11929017,1299,Wed Jul 08 00:00:00 UTC 2020,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+203096483,dmateusl,"Lewandowski,Mateusz",13363979,1299,Mon Apr 08 00:00:00 UTC 2024,AMZN,Active,"Swirski,Piotr",,PLA5AMGT
+202027740,yatkater,"YATSIUK,KATERYNA",13164415,1299,Thu Aug 14 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5AIDG
+206705667,karpiakl,"Karpiak,Laura",0068502,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5AIDG
+105832219,dszuberl,"Szuberla,Dorian",12928907,1299,Fri May 01 00:00:00 UTC 2020,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+103432509,damiatar,"Tarasek,Damian Marcin",15057256,1299,Thu Jul 21 00:00:00 UTC 2022,AMZN,Active,"Swirski,Piotr",,PLA5DMGT
+111026651,sniadakl,"Sniada,Klaudia",14687693,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+204680485,fishrola,"Fisher,Roland",13061394,1290,Mon Dec 02 00:00:00 UTC 2024,3PTY,Active,"Kaminska,Natalia Kamila",HUNK,
+106823361,mikulick,"Mikulicz,Karolina",12812915,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5AIDG
+205859133,agstrzal,"Strzala,Agnieszka",11630974,1299,Fri Aug 22 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+106900561,faltyr,"Ksiazek,Renata",12685625,1299,Wed May 27 00:00:00 UTC 2020,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+201985645,kasprnik,"Kasprzyk,Nikola",14351589,1299,Thu Aug 14 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5DMGT
+102114089,bialko,"Bielko,Agnieszka",12596492,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+108904667,diedovah,"Diedova,Hanna",14796424,1299,Fri Aug 16 00:00:00 UTC 2024,3PTY,Active,"Swirski,Piotr",ADEC,PLA5DMGT
+112927762,nmarpawe,"Pawelko,Marta",15325235,1299,Tue Aug 01 00:00:00 UTC 2023,AMZN,Active,"Borowiecki,Pawel",,RT4581
+102923773,kaczorg,"Kaczorowski,Grzegorz",13064250,1299,Fri Jul 25 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+206200006,wkitalek,"Kita,Aleksandra",12763916,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5BMGT
+111274710,mielnmal,"Mielnik,Malgorzata",12827367,1299,Wed Oct 27 00:00:00 UTC 2021,AMZN,Active,"Swirski,Piotr",,PLA5DMGT
+105602880,kotwick,"Kotwicki,Wojciech",11421891,1299,Sat Jul 01 00:00:00 UTC 2023,AMZN,Active,"Szymczak,Michal",,RT4583
+105745392,ewblazy,"Blazykowska,Ewa",12833489,1299,Wed May 27 00:00:00 UTC 2020,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+206249179,idkuliko,"Kulikowa,Irena",11127005,1299,Fri Oct 10 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5BIDG
+204011314,besosnow,"Sosnowska,Beata",12809662,1299,Fri Jul 18 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5DIDG
+204052048,giagsole,"Soler,Gianni",15085249,1207,Thu Sep 26 00:00:00 UTC 2024,3PTY,Active,"Skelton,Matthew",MMA,
+206307200,sebstank,"Stankiewicz,Sebastian",12486802,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7AMGT
+102787905,kwojciul,"Rutkowska - Wojciul,Katarzyna",11815079,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+204413394,musieanp,"Musielska,Anna Aleksandra",11653973,1299,Fri Jul 25 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+102745053,kbarba,"Kowalska,Barbara",11575935,1299,Thu Mar 01 00:00:00 UTC 2018,AMZN,Active,"Borucki,Aleksy Marcin",,PLC1-MGT
+203029124,sroczema,"Sroczek,Marcin",13690587,1290,Mon Feb 19 00:00:00 UTC 2024,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+206148036,dmytrvla,"DMYTRENKO,Vladyslav",13254865,1299,Fri Sep 26 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5BIDG
+102960005,mwantoch,"Wantoch,Mariusz",14126046,1299,Wed Oct 06 00:00:00 UTC 2021,AMZN,Active,"Sliz,Daria",,PLA5DIDG
+202242886,kostynen,"Kostynenko,Olena",14181451,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+206705677,kvfrydry,"Frydryk,Kacper",13382031,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+206705675,bodudycz,"Dudycz,Boguslaw",15021434,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+202381388,laniewsd,"Laniewski,Damian",13782281,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+203222043,vsygdpaw,"Sygdziak,Pawel",14676099,1712,Mon Apr 15 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",MOLT,
+206756339,mielcewe,"Mielczarek,Ewelina",11947538,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+201910421,mistarzd,"Mistarz,Dominik",14311921,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+206372799,serdehta,"Serdeha,Tamara",0324071,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5BMGT
+206448660,balukmar,"Baluk,Martyna",12960859,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+107124399,medusheu,"Mieduszewski,Aleksander",13962795,1299,Mon May 06 00:00:00 UTC 2024,AMZN,Active,"Sliz,Daria",,W4A1LIDG
+205713276,agnwolsk,"Wolska,Agnieszka",11375860,1299,Fri Jul 25 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+201641619,sujdorot,"Sujecka,Dorota",14258185,1299,Tue Oct 21 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+205813984,macotani,"Cotani,Marco",12863952,1712,Mon Sep 15 00:00:00 UTC 2025,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+104102001,annagazd,"Gazda,Anna Krystyna",0013519,1299,Fri Mar 01 00:00:00 UTC 2019,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+102726545,sekanna,"Sekowska,Anna Maria",11614709,1299,Thu Feb 01 00:00:00 UTC 2018,AMZN,Active,"Swirski,Piotr",,PLA5CMGT
+101823386,arroratk,"Rorat-Kaczmarek,Anna",14721944,1299,Mon Apr 01 00:00:00 UTC 2024,AMZN,Active,"Szymczak,Michal",,RT4583
+101699978,jarock,"Jarocka,Angelika Anna",14499155,1299,Tue Oct 21 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+201641592,kmotuzky,"Motuzka,Kateryna",15150188,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+206705665,qroksana,"Dunicz,Roksana",15317673,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+203205327,kamickog,"Kogut,Kamil",0300366,1712,Mon Nov 17 00:00:00 UTC 2025,3PTY,Active,"Leszczyk,Hubert",MOLT,
+206622447,katpavli,"Pavliuk,Kateryna",12997057,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+205505189,moraszfm,"Morasz,Magdalena",11569444,1299,Fri Jun 20 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+106622078,bojakows,"Bojakowski,Krzysztof Adam",11607703,1299,Wed Apr 29 00:00:00 UTC 2020,AMZN,Active,"Swirski,Piotr",,PLA5CMGT
+100523437,krzygali,"Gali,Krzysztof Mikolaj",11150987,1712,Mon Jan 12 00:00:00 UTC 2015,AMZN,Active,"Wocial,Damian Tomasz",,DB2-0600
+204298262,hewuszwi,"Hewusz,Wiktoria",13849633,1299,Fri Oct 18 00:00:00 UTC 2024,3PTY,Active,"Sliz,Daria",ADEC,PLA5CIDG
+204981701,kamwierv,"Wierzbicki,Kamil",12836593,1290,Fri Feb 28 00:00:00 UTC 2025,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+101689570,biberste,"Biberstein,Adam",11620223,1299,Wed Mar 01 00:00:00 UTC 2017,AMZN,Active,"Szymczak,Michal",,PLB1-IDG
+203949314,andrzmly,"Mlynarczyk,Andrzej",13220388,1712,Thu Sep 05 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",MMA,
+109416356,bujerzyi,"Bulawa,Jerzy",14464970,1299,Fri Aug 01 00:00:00 UTC 2025,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+110403437,olevladi,"Vladimirova,Olena",14375122,1299,Fri Sep 26 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+202630473,syswiryd,"Swiryd,Sylwia Katarzyna",12561935,1299,Tue Oct 01 00:00:00 UTC 2024,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+105660941,konwi,"Konwent-Maslanka,Iwona",11322132,1299,Fri Aug 29 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+206306934,sostryki,"Ostrykiewicz,Sylwia",13482454,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7AMGT
+204071478,oliwiofa,"Ofat,Oliwia",14019886,1299,Fri Sep 26 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+101700003,annfilit,"Filitowska,Anna",11630274,1299,Wed Mar 01 00:00:00 UTC 2017,AMZN,Active,"Sliz,Daria",,PLA5BIDG
+100413277,mikkamil,"Mikos,Kamil Krzysztof",11057354,1299,Sun May 24 00:00:00 UTC 2015,AMZN,Active,"Swirski,Piotr",,PLA5DMGT
+204637127,piskorse,"Piskorowski,Sebastian",13642725,1299,Fri Nov 07 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLI7-MGT
+105411303,kwapp,"Kwapisz,Piotr",12464582,1299,Sun Mar 01 00:00:00 UTC 2020,AMZN,Active,"Borowiecki,Pawel",,W4B1LMGT
+204172125,xradawid,"Radzikowski,Dawid Adam",13559447,1299,Tue Oct 01 00:00:00 UTC 2024,AMZN,Active,"Swirski,Piotr",,PLA5CMGT
+200964514,szewcmie,"Szewc,Michal",11492050,1711,Fri Dec 16 00:00:00 UTC 2022,3PTY,Active,"Gali,Krzysztof Mikolaj",WJMA,
+109826293,lyzwkami,"Łyżwińska,Kamila",12062808,1299,Mon Apr 01 00:00:00 UTC 2024,AMZN,Active,"Borucki,Aleksy Marcin",,PLC1-MGT
+206705676,lunpatry,"Lunczuk,Patryk",12269338,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5DMGT
+102291424,reszcj,"Reszczyk,Joanna",13778889,1299,Tue Aug 01 00:00:00 UTC 2023,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+206621815,murawsma,"Murawski,Marcel",15080778,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+203222039,mrechcin,"Rechcinski,Mariusz",12818074,1712,Mon Apr 15 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",MOLT,
+205673118,lukamal,"Małek,Łukasz",14974384,1712,Mon Sep 08 00:00:00 UTC 2025,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+206307127,gpniewsk,"Pniewski,Grzegorz Jan",12412104,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+202125519,jdziura,"Dziura,Jakub Jan",15137108,1712,Mon Oct 02 00:00:00 UTC 2023,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+206372792,stansoro,"Sorochan,Stanislav",0019602,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5AMGT
+110929515,tabaszew,"Tabaszewska,Adriana",11935641,1299,Wed Sep 29 00:00:00 UTC 2021,AMZN,Active,"Swirski,Piotr",,PLA5BMGT
+201985559,grabodo,"Grabowska,Dominika",12797202,1299,Thu Aug 01 00:00:00 UTC 2024,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+202464623,emleszcz,"Leszczynska,Emilia",13062192,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+203958229,galinjag,"Galinska,Jagoda",13775614,1299,Fri Sep 12 00:00:00 UTC 2025,3PTY,Active,"Syromiatnikova,Mariia",ADEC,PLC1-IDG
+203275521,leumacie,"Lewandowski,Maciej",15368759,1290,Sun May 05 00:00:00 UTC 2024,3PTY,Active,"Kaminska,Natalia Kamila",CP,
+111026647,szaratan,"Szarata,Natalia",0133190,1299,Thu Jun 01 00:00:00 UTC 2023,AMZN,Active,"Borucki,Aleksy Marcin",,PLC1-MGT
+104766031,bppawlus,"Pawlus,Bartosz",15253157,1299,Fri Sep 26 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+103449976,ooolszew,"Olszewski,Oskar",14698110,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7CMGT
+203713850,malwikuc,"Kubisz,Malwina",11542529,1290,Mon Jul 22 00:00:00 UTC 2024,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+101007325,elzbip,"Pyc,Elzbieta",11053909,1299,Sun May 01 00:00:00 UTC 2016,AMZN,Active,"Sliz,Daria",,PLA5AIDG
+109305715,gebibraj,"Gebicki,Brajan",11404135,1299,Fri Aug 29 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,RT4583
+206487419,magpatyn,"Patynek,Magdalena",11160031,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+206705669,naszczuj,"Szczudlek,Natalia",13814318,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5CMGT
+200943049,zhovtovi,"Zhovtobriukh,Viktoriia",15117594,1299,Sun Dec 01 00:00:00 UTC 2024,AMZN,Active,"Borowiecki,Pawel",,RT4978
+109616660,rafpiecb,"Piechowicz,Rafal",14282325,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5AIDG
+101287021,ajjanko,"Jankowska,Agnieszka Dorota",11180438,1299,Tue Nov 01 00:00:00 UTC 2016,AMZN,Active,"Borowiecki,Pawel",,RT4978
+109855371,malnowic,"Wisniewska,Malwina",15375549,1299,Fri Aug 29 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+206448672,levallay,"Levchenko,Alla",13735120,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+103134591,ziebaada,"Zieba,Adam Antoni",11812097,1712,Thu Mar 01 00:00:00 UTC 2018,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+206199853,agnincal,"Calkowska,Agnieszka",11491537,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5DIDG
+205547042,fwladycz,"Wladyczewski,Andrzej",13433931,1712,Wed Jun 25 00:00:00 UTC 2025,3PTY,Active,"Leszczyk,Hubert",MOLT,
+206372795,majatgol,"Golas,Maja",14974218,1299,Fri Oct 24 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLA5BMGT
+200642786,janualbe,"Janusz,Albert",0289161,1299,Mon Apr 01 00:00:00 UTC 2024,AMZN,Active,"Borowiecki,Pawel",,RT4581
+206448657,golebwer,"Golebiewska,Weronika",12805848,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Swirski,Piotr",ADEC,PLE7AMGT
+107729757,golaszna,"Golaszewski,Natan",11772338,1299,Tue Oct 21 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+206222595,jtczarne,"Czarnecki,Jaroslaw",13483357,1712,Wed Oct 08 00:00:00 UTC 2025,3PTY,Active,"Leszczyk,Hubert",MMA,
+203925683,blaqmigu,"Blanco Alvarez,Miguel",11126090,1290,Sat Sep 07 00:00:00 UTC 2024,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+104223386,wajnet,"Wajner,Tomasz",11286006,1712,Mon Jan 07 00:00:00 UTC 2019,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+206199855,buczkolu,"Buczko,Lukasz",13736590,1299,Fri Oct 03 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+112810708,wisnwikt,"Wisniowiecka,Wiktoria",11420767,1299,Thu Jul 21 00:00:00 UTC 2022,AMZN,Active,"Runo,Aleksandra Anna",,PLA5CMGT
+103868953,kusznata,"Kusz,Natalia",0330069,1299,Thu Aug 01 00:00:00 UTC 2019,AMZN,Active,"Swirski,Piotr",,PLA5BMGT
+104547216,kcichows,"Glowacka,Kamila Anna",11143669,1299,Sun Dec 01 00:00:00 UTC 2019,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+203927067,rowczare,"Owczarek,Emil",14740480,1712,Mon Sep 02 00:00:00 UTC 2024,3PTY,Active,"Gali,Krzysztof Mikolaj",WJMA,
+100323085,balchang,"Balchan,Grzegorz Pawel",0006561,1712,Mon Sep 22 00:00:00 UTC 2014,AMZN,Active,"Gali,Krzysztof Mikolaj",,DB1-0600
+106763869,vitmelny,"Melnyk,Vitalii",12728446,1299,Mon Mar 01 00:00:00 UTC 2021,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+201910408,elzbmaty,"Matyjasek,Elzbieta",13457101,1299,Fri Jul 18 00:00:00 UTC 2025,3PTY,Active,"Sliz,Daria",ADEC,PLA5CIDG
+202970106,tszwajac,"Szwaczka,Jacek",13240699,1290,Mon Jan 29 00:00:00 UTC 2024,3PTY,Active,"Kaminska,Natalia Kamila",HPIN,
+100323698,pietrunm,"Pietruniak,Magdalena",0200130,1299,Tue Sep 23 00:00:00 UTC 2014,AMZN,Active,"Syromiatnikova,Mariia",,PLC1-IDG
+206705659,naleszcz,"Aleszczyk,Natalia",12355610,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+206448664,svparfen,"Parfeniuk,Svitlana",11758610,1299,Fri Oct 31 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+102383686,kowerka,"Kowerko,Agnieszka",13317557,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+103567107,ddonets,"Donets,Dmytro",14409377,1299,Fri Nov 28 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4581
+100986860,tomasbie,"Bielawski,Tomasz",13623147,1299,Fri Nov 21 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
+105824011,zawadan,"Zawada,Natalia",0264770,1299,Sat Jul 01 00:00:00 UTC 2023,AMZN,Active,"Borowiecki,Pawel",,RT4581
+105670977,wesolb,"Wesolowska,Barbara",14983734,1299,Fri Sep 01 00:00:00 UTC 2023,AMZN,Active,"Sliz,Daria",,PLE7AIDG
+100685270,tbbogack,"Bogacki,Tomasz",13205955,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLB1-IDG
+204071554,gukrysti,"Guzek,Krystian",14591226,1299,Tue Oct 21 00:00:00 UTC 2025,3PTY,Active,"Borucki,Aleksy Marcin",ADEC,PLC1-MGT
+206621814,nasjeong,"Jeong,Natalia",13107679,1299,Fri Nov 14 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,PLB1-MGT
+104740318,dsshevch,"Shevchenko,Daria",14899279,1299,Fri Oct 17 00:00:00 UTC 2025,3PTY,Active,"Borowiecki,Pawel",ADEC,RT4978
+105450209,magbaran,"Pacura Baranska,Magdalena Marta",11446893,1299,Sat Nov 07 00:00:00 UTC 2020,AMZN,Active,"Borowiecki,Pawel",,RT4978
+100325783,kowalczr,"Kowalczyk,Radoslaw Piotr",0119292,1299,Wed Sep 24 00:00:00 UTC 2014,AMZN,Active,"Borowiecki,Pawel",,PLB1-MGT
+206531771,kalmykol,"Kalmykova,Olha",13777101,1299,Fri Nov 07 00:00:00 UTC 2025,3PTY,Active,"Szymczak,Michal",ADEC,PLI7-IDG
