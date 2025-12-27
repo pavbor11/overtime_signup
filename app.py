@@ -46,8 +46,10 @@ def load_employee_lookup():
         # normalize header names
         reader.fieldnames = [h.strip().lower() for h in reader.fieldnames]
         for row in reader:
-            # normalize keys
-            row = {k.strip().lower(): v for k,v in row.items()}
+            if row is None:
+                continue  # ignorujemy puste wiersze
+            # normalize keys and ignore None values
+            row = {k.strip().lower(): v for k,v in row.items() if k and v is not None}
             login = row.get('user id')
             if not login:
                 continue
@@ -90,7 +92,6 @@ def api_entries():
     db = get_db()
     cur = db.cursor()
 
-    # --- POST: dodawanie wpisu ---
     if request.method == 'POST':
         data = request.get_json()
         login = data.get('login')
@@ -106,12 +107,10 @@ def api_entries():
         db.commit()
         return jsonify({'status': 'ok'})
 
-    # --- GET ---
     week_start = request.args.get('week_start')
     day = request.args.get('day')
     month = request.args.get('month')
 
-    # --- Miesiąc ---
     if month:
         try:
             month = int(month)
@@ -138,7 +137,6 @@ def api_entries():
             })
         return jsonify({'entries': entries})
 
-    # --- Dzień ---
     if day:
         cur.execute("""
             SELECT login, shift FROM entries
@@ -167,7 +165,6 @@ def api_entries():
             'night_shift': night_shift
         })
 
-    # --- Tydzień ---
     if not week_start:
         return jsonify({'error': 'week_start required'}), 400
 
@@ -191,7 +188,6 @@ def api_entries():
 
     return jsonify({'week_start': week_start, 'per_day': per_day})
 
-# --- DELETE ENTRY ---
 @app.route('/api/entries/delete', methods=['POST'])
 def api_delete_entry():
     data = request.get_json()
@@ -208,6 +204,4 @@ def api_delete_entry():
     return jsonify({'status':'ok'})
 
 if __name__ == '__main__':
-    app.run(debug=True)  # lokalnie
-
-
+    app.run(debug=True)
