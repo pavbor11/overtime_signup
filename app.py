@@ -72,7 +72,7 @@ def api_weeks():
     current_sunday = today - timedelta(days=days_to_sunday)
 
     weeks = []
-    for i in range(-4, 4):
+    for i in range(-3, 4):
         s = current_sunday + timedelta(weeks=i)
         weeks.append({
             'label': s.strftime('%U') + ' / ' + s.strftime('%Y'),
@@ -205,6 +205,7 @@ def api_delete_entry():
 
 if __name__ == '__main__':
     app.run(debug=True)  # lokalnie
+
 
 
 
