@@ -41,14 +41,15 @@ def init_db():
 # --- CSV LOOKUP ---
 def load_employee_lookup():
     lookup_dict = {}
-    with open(CSV_PATH, newline='', encoding='utf-8') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            login = row['User ID']
-            lookup_dict[login] = {
-                'name': row['Employee Name'],
-                'shift_pattern': row['Shift Pattern']
-            }
+with open(CSV_PATH, newline='', encoding='utf-8') as csvfile:
+    reader = csv.DictReader(csvfile, delimiter='\t')
+    for row in reader:
+        login = row['User ID'].strip().lower()
+        employee_lookup[login] = {
+            'name': row.get('Employee Name', ''),
+            'shift': row.get('Shift Pattern', '')
+        }
+
     return lookup_dict
 
 employee_lookup = load_employee_lookup()
@@ -203,5 +204,6 @@ def api_delete_entry():
 
 if __name__ == '__main__':
     app.run(debug=True)  # lokalnie
+
 
 
