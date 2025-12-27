@@ -150,7 +150,7 @@ def api_entries():
             entry = {
                 'login': r['login'],
                 'name': emp.get('name', ''),
-                'shift_pattern': emp.get('shift_pattern', '')
+                'shift_pattern': emp.get('shift', '')
             }
             if r['shift'] == 'night':
                 night_shift.append(entry)
@@ -205,6 +205,7 @@ def api_delete_entry():
 
 if __name__ == '__main__':
     app.run(debug=True)  # lokalnie
+
 
 
 
