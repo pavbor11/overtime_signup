@@ -43,11 +43,17 @@ def load_employee_lookup():
     lookup_dict = {}
     with open(CSV_PATH, newline='', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
+        # normalize header names
+        reader.fieldnames = [h.strip().lower() for h in reader.fieldnames]
         for row in reader:
-            login = row['User ID']
+            # normalize keys
+            row = {k.strip().lower(): v for k,v in row.items()}
+            login = row.get('user id')
+            if not login:
+                continue
             lookup_dict[login] = {
-                'name': row['Employee Name'],
-                'shift_pattern': row['Shift Pattern']
+                'name': row.get('employee name',''),
+                'shift_pattern': row.get('shift pattern','')
             }
     return lookup_dict
 
@@ -203,4 +209,5 @@ def api_delete_entry():
 
 if __name__ == '__main__':
     app.run(debug=True)  # lokalnie
+
 
