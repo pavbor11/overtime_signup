@@ -1,122 +1,196 @@
-/* -------------------------- */
 /* Podświetlenie wybranego tygodnia i aktywnego dnia/shiftu */
-/* -------------------------- */
 .selected-week {
-  background-color: #bd9af6 !important;
+  background-color: #db94ff !important;
   color: #fff !important;
 }
 
 .table-success {
-  background-color: #bd9af6 !important;
+  background-color: #db94ff !important;
   color: #ffffff !important;
 }
 
-/* -------------------------- */
 /* Flex dla wyrównania listy tygodni i tabeli w jednej linii */
-/* -------------------------- */
 .align-tables {
   display: flex;
   align-items: flex-start; /* wyrównanie nagłówków do góry */
   gap: 50px; /* odstęp między kolumnami */
 }
 
-/* -------------------------- */
-/* Lista tygodni - nagłówek i box */
-/* -------------------------- */
+.tab-pane {
+    margin-top: 45px; /* odstęp między zakładkami a tabelą */
+}
+
+/* LISTA TYGODNI – CLEAN & SPOJNA */
+
+/* Nagłówek listy tygodni */
 .center-header {
-  height: 45px;
-  line-height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 12px;
-  font-size: 16px;
-  font-weight: 650;
-  background-color: #b3d5f7;
-  border: 1px solid #dee2e6;
-  border-bottom: none;
-  border-radius: 8px 8px 0 0;
-  margin-bottom: 0;
+    height: 45px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    font-size: 16px;
+    font-weight: 650;
+    background-color: #b3d5f7;
+
+    /* precyzyjne border */
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+    border-bottom: none;
+
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
 }
 
-.tab-content {
-    margin-top: 50px !important; /* odsuwa tabele od zakładek */
-}
-
-
+/* Kontener listy tygodni */
 #weeksList {
-  border: 1px solid #dee2e6;
-  border-top: none;
-  border-radius: 0 0 8px 8px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+
+    border-radius: 0 0 8px 8px;
+
+    /* opcjonalnie: tło dla całej listy */
+    background-color: #ffffff;
 }
 
-/* -------------------------- */
-/* Tabela główna (#weekTableContainer) */
-/* -------------------------- */
-#weekTableContainer {
-  margin-top: 0 !important;
+/* Elementy tygodni w liście (opcjonalnie, jeśli masz np. li lub div) */
+#weeksList .week-item {
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
 }
+
+/* Hover dla elementów tygodni */
+#weeksList .week-item:hover {
+    background-color: rgba(179, 213, 247, 0.18);
+}
+
+/* Aktywny / wybrany tydzień */
+#weeksList .week-item.active {
+    background-color: #bd9af6;
+    color: #fff;
+}
+
+
+/* ===================================== */
+/* WEEK TABLE – FINAL / CLEAN / STABLE */
+/* ===================================== */
 
 #weekTableContainer table {
-  border-collapse: separate;
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
-  width: 100%;
-  border-spacing: 0;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #ffffff;
 }
 
+/* HEADER */
 #weekTableContainer thead th {
-  background-color: #b3d5f7;
-  font-weight: 650;
-  font-size: 16px;
-  text-align: left;
-  padding: 10px 12px;
-  border: none;
+    background-color: #b3d5f7;
+    font-weight: 650;
+    font-size: 16px;
+    color: #1f3b5c;
+    padding: 10px 12px;
+    text-align: left;
+    border: none;
 }
 
 #weekTableContainer thead th:first-child {
-  border-top-left-radius: 8px;
+    border-top-left-radius: 8px;
 }
 
 #weekTableContainer thead th:last-child {
-  border-top-right-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
-#weekTableContainer tbody tr:nth-child(odd) {
-  background-color: #ffffff !important;
-}
-
-#weekTableContainer tbody tr:nth-child(even) {
-  background-color: #f8f9fa !important;
-}
-
+/* ---------------- */
+/* CELLS – BASE */
+/* ---------------- */
 #weekTableContainer tbody td {
-  border: none;
-  text-align: left;
+    padding: 8px 12px;
+    border: none;
+    color: #212529;
+    background-color: transparent;
 }
 
-/* Wyśrodkowanie wybranych kolumn */
-#weekTableContainer table thead th:nth-child(2),
-#weekTableContainer table thead th:nth-child(4),
-#weekTableContainer table thead th:nth-child(5),
-#weekTableContainer table tbody td:nth-child(2),
-#weekTableContainer table tbody td:nth-child(4),
-#weekTableContainer table tbody td:nth-child(5) {
-  text-align: center !important;
+/* ---------------- */
+/* ODD / EVEN */
+/* ---------------- */
+#weekTableContainer tbody tr:nth-child(odd) td {
+    background-color: #ffffff;
 }
 
-#weekTableContainer table thead th:nth-child(3),
-#weekTableContainer table tbody td:nth-child(3) {
-  text-align: right !important;
+#weekTableContainer tbody tr:nth-child(even) td {
+    background-color: #f3f3f3;
 }
 
-/* -------------------------- */
+/* ---------------- */
+/* SOFT HOVER */
+/* ---------------- */
+#weekTableContainer tbody tr td {
+    transition: background-color 0.25s ease;
+}
+
+#weekTableContainer tbody tr:hover td {
+    background-color: rgba(104, 123, 142, 0.18);
+}
+
+/* ---------------- */
+/* SELECTED / ACTIVE */
+/* ---------------- */
+#weekTableContainer tbody tr.table-success td,
+#weekTableContainer tbody tr.selected-week td {
+    background-color: #db94ff !important;
+    color: #ffffff;
+}
+
+/* ---------------- */
+/* TEXT ALIGN */
+/* ---------------- */
+#weekTableContainer thead th:nth-child(2),
+#weekTableContainer thead th:nth-child(4),
+#weekTableContainer thead th:nth-child(5),
+#weekTableContainer tbody td:nth-child(2),
+#weekTableContainer tbody td:nth-child(4),
+#weekTableContainer tbody td:nth-child(5) {
+    text-align: center;
+}
+
+#weekTableContainer thead th:nth-child(3),
+#weekTableContainer tbody td:nth-child(3) {
+    text-align: right;
+}
+
+/* ---------------- */
+/* ROW SEPARATORS */
+/* ---------------- */
+#weekTableContainer tbody tr td {
+    border-top: 1px solid #dee2e6;
+}
+
+#weekTableContainer tbody tr:first-child td {
+    border-top: none;
+}
+
+/* ---------------- */
+/* HOVER CURSOR */
+/* ---------------- */
+#weekTableContainer tbody tr {
+    cursor: pointer;
+}
+
+
 /* Nagłówek główny strony */
 h1 {
   text-align: center;
   font-size: 4rem;
   margin-top: 1.5rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
   font-weight: 650;
 }
 
@@ -135,10 +209,10 @@ h1 {
   position: absolute;
   top: 10px;
   left: 10px;
-  height: 100px;
+  height: 120px;
 }
 
-/* -------------------------- */
+
 /* Day/Night headers */
 .shift-header {
   cursor: pointer;
@@ -148,17 +222,16 @@ h1 {
   border: 1px solid #dee2e6;
   border-radius: 8px 8px 0 0;
   padding: 0;
-  height: 45px;       /* stała wysokość */
-  line-height: 45px;  /* pionowe wyśrodkowanie tekstu */
+  height: 43px;       /* stała wysokość */
+  line-height: 40px;  /* pionowe wyśrodkowanie tekstu */
   margin-bottom: 0;
 }
 
 .shift-header.table-success {
-  background-color: #bd9af6;
+  background-color: #db94ff;
   color: #fff;
 }
 
-/* -------------------------- */
 /* Tabele Day/Night */
 .shift-table {
   width: 100%;
@@ -216,7 +289,7 @@ h1 {
   display: flex;
   gap: 20px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 /* Ucinanie długiego tekstu w tabelach shift */
 .shift-table th,
@@ -246,72 +319,95 @@ h1 {
     padding: 10px 15px;               /* większe kafelki */
     border-radius: 8px !important;  /* zaokrąglenie */
     cursor: pointer;
-    font-weight: 650;
+    font-weight: 600;
     text-align: center;
-    min-width: 70px;                 /* minimalna szerokość */
+    min-width: 75px;                 /* minimalna szerokość */
     transition: all 0.2s;
 }
 
 /* Hover efekt */
 .month-btn:hover {
-    background-color: #6cbcf1;       /* lekko fioletowe tło */
+    background-color: #b3d5f7;       /* lekko fioletowe tło */
     border-color: #999;               /* ciemniejsze obramowanie */
     color: #000;
 }
 
 /* Aktywny miesiąc */
 .month-btn.active {
-    background-color: #ee92fa !important; /* różowe wypełnienie */
+    background-color: #db94ff !important; /* różowe wypełnienie */
     color: #fff !important;
-    border: 2px solid #ffffff !important; /* niebieskie obramowanie */
+    border: 1px solid #ffffff !important; /* niebieskie obramowanie */
     border-radius: 8px !important;
 }
 
 
+/* ================================ */
+/* TABELA PODSUMOWANIA – CLEAN */
+/* ================================ */
+
 #summaryTableContainer table {
-    width: 100%;
-    border-collapse: separate; /* ważne, żeby border-radius działał */
+    width: 89.3%;
+    border-collapse: separate;
     border-spacing: 0;
     border: 1px solid #dee2e6;
-    border-radius: 8px !important; /* zaokrąglone rogi całej tabeli */
+    border-radius: 8px;
 }
 
+/* Nagłówek */
+#summaryTableContainer table thead th {
+    background-color: #b3d5f7;
+    font-weight: 600;
+    color: #1f3b5c;
+    padding: 8px 12px;
+    text-align: left;
+    border: none;
+}
+
+/* Zaokrąglenia nagłówka */
 #summaryTableContainer table thead th:first-child {
-    border-top-left-radius: 8px !important;
+    border-top-left-radius: 8px;
 }
 
 #summaryTableContainer table thead th:last-child {
-    border-top-right-radius: 8px !important;
+    border-top-right-radius: 8px;
 }
 
+/* Komórki */
+#summaryTableContainer table tbody td {
+    padding: 8px 12px;
+    border: none;
+    text-align: left;
+}
+
+/* Linie poziome */
+#summaryTableContainer table tbody tr td {
+    border-top: 1px solid #dee2e6;
+}
+
+/* Linie pionowe */
+#summaryTableContainer table th + th,
+#summaryTableContainer table td + td {
+    border-left: 1px solid #dee2e6;
+}
+
+/* Zaokrąglenia dołu */
 #summaryTableContainer table tbody tr:last-child td:first-child {
-    border-bottom-left-radius: 8px !important;
+    border-bottom-left-radius: 8px;
 }
 
 #summaryTableContainer table tbody tr:last-child td:last-child {
-    border-bottom-right-radius: 8px !important;
+    border-bottom-right-radius: 8px;
 }
 
-/* Tabela podsumowania – ustawienie szerokości kolumn */
-#summaryTableContainer table {
-    border-collapse: collapse; /* żeby lepiej działało */
-    width: 100%;
-}
-
+/* Szerokości kolumn */
 #summaryTableContainer th:nth-child(1),
 #summaryTableContainer td:nth-child(1) { width: 20%; }
+
 #summaryTableContainer th:nth-child(2),
 #summaryTableContainer td:nth-child(2) { width: 30%; }
+
 #summaryTableContainer th:nth-child(3),
 #summaryTableContainer td:nth-child(3) { width: 25%; }
+
 #summaryTableContainer th:nth-child(4),
 #summaryTableContainer td:nth-child(4) { width: 25%; }
-
-
-/* Dodatkowe style dla tabeli podsumowania */
-#summaryTableContainer table th,
-#summaryTableContainer table td {
-    padding: 8px 12px;
-    border: 1px solid #dee2e6;
-    text-align: left;
-}
