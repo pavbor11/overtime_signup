@@ -1,44 +1,45 @@
-from flask import Flask, render_template, request, jsonify, g
-import sqlite3
+from flask import Flask, render_template, request, jsonify
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import extract
 from datetime import datetime, timedelta, date
 import os
 import csv
 
-DB_PATH = os.path.join(os.path.dirname(__file__), 'data', 'overtime.db')
-CSV_PATH = os.path.join(os.path.dirname(__file__), 'data', 'employeeList.csv')
+# =========================
+# Flask + SQLAlchemy setup
+# =========================
 
 app = Flask(__name__)
 
-# --- DB helpers ---
-def get_db():
-    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-    db = getattr(g, '_database', None)
-    if db is None:
-        db = g._database = sqlite3.connect(DB_PATH)
-        db.row_factory = sqlite3.Row
-    return db
+database_url = os.environ.get("DATABASE_URL")
+if database_url and database_url.startswith("postgres://"):
+    database_url = database_url.replace("postgres://", "postgresql://", 1)
 
-@app.teardown_appcontext
-def close_connection(exception):
-    db = getattr(g, '_database', None)
-    if db is not None:
-        db.close()
+app.config["SQLALCHEMY_DATABASE_URI"] = database_url or "sqlite:///overtime_local.db"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
-def init_db():
-    db = get_db()
-    cur = db.cursor()
-    cur.execute('''
-        CREATE TABLE IF NOT EXISTS entries (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            login TEXT NOT NULL,
-            work_date TEXT NOT NULL,
-            shift TEXT NOT NULL DEFAULT 'day',
-            created_at TEXT NOT NULL
-        )
-    ''')
-    db.commit()
+db = SQLAlchemy(app)
 
-# --- CSV LOOKUP ---
+# =========================
+# Models
+# =========================
+
+class Entry(db.Model):
+    __tablename__ = "entries"
+
+    id = db.Column(db.Integer, primary_key=True)
+    login = db.Column(db.String, nullable=False)
+    work_date = db.Column(db.Date, nullable=False)
+    shift = db.Column(db.String, nullable=False, default="day")
+    created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+
+# =========================
+# CSV LOOKUP
+# =========================
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CSV_PATH = os.path.join(BASE_DIR, 'data', 'employeeList.csv')
+
 def load_employee_lookup():
     lookup_dict = {}
 
@@ -55,14 +56,20 @@ def load_employee_lookup():
 
 employee_lookup = load_employee_lookup()
 
-# --- Utilities ---
-def week_dates_for_week_start(sunday_date):
-    return [(sunday_date + timedelta(days=i)).isoformat() for i in range(7)]
+# =========================
+# Utilities
+# =========================
 
-# --- Routes ---
+def week_dates_for_week_start(sunday_date):
+    return [(sunday_date + timedelta(days=i)) for i in range(7)]
+
+# =========================
+# Routes
+# =========================
+
 @app.route('/')
 def index():
-    init_db()
+    db.create_all()
     return render_template('index.html')
 
 @app.route('/api/weeks')
@@ -83,132 +90,158 @@ def api_weeks():
 
 @app.route('/api/entries', methods=['GET', 'POST'])
 def api_entries():
-    db = get_db()
-    cur = db.cursor()
 
-    # --- POST: dodawanie wpisu ---
+    # -------- POST --------
     if request.method == 'POST':
         data = request.get_json()
-        login = data.get('login')
-        work_date = data.get('work_date')
+        login = (data.get('login') or '').strip().lower()
+        work_date_str = data.get('work_date')
         shift = data.get('shift') or 'day'
-        if not login or not work_date:
+
+        if not login or not work_date_str:
             return jsonify({'error': 'login and work_date required'}), 400
 
-        cur.execute(
-            'INSERT INTO entries (login, work_date, shift, created_at) VALUES (?, ?, ?, ?)',
-            (login, work_date, shift, datetime.utcnow().isoformat())
+        try:
+            work_date = datetime.fromisoformat(work_date_str).date()
+        except ValueError:
+            return jsonify({'error': 'work_date must be YYYY-MM-DD'}), 400
+
+        entry = Entry(
+            login=login,
+            work_date=work_date,
+            shift=shift
         )
-        db.commit()
+        db.session.add(entry)
+        db.session.commit()
+
         return jsonify({'status': 'ok'})
 
-    # --- GET ---
+    # -------- GET --------
     week_start = request.args.get('week_start')
     day = request.args.get('day')
     month = request.args.get('month')
 
-    # --- Miesiąc ---
+    # -------- MONTH --------
     if month:
         try:
             month = int(month)
-            if month < 1 or month > 12:
-                raise ValueError()
+            if not 1 <= month <= 12:
+                raise ValueError
         except ValueError:
-            return jsonify({'error':'month must be 1-12'}), 400
+            return jsonify({'error': 'month must be 1-12'}), 400
 
-        cur.execute("""
-            SELECT login, work_date, shift FROM entries
-            WHERE strftime('%m', work_date) = ?
-            ORDER BY work_date ASC
-        """, (f"{month:02}",))
-        rows = cur.fetchall()
+        rows = (
+            db.session.query(Entry)
+            .filter(extract('month', Entry.work_date) == month)
+            .order_by(Entry.work_date.asc())
+            .all()
+        )
 
         entries = []
         for r in rows:
-            emp = employee_lookup.get(r['login'], {})
+            emp = employee_lookup.get(r.login, {})
             entries.append({
-                'login': r['login'],
-                'name': emp.get('name',''),
-                'work_date': r['work_date'],
-                'shift': r['shift']
+                'login': r.login,
+                'name': emp.get('name', ''),
+                'work_date': r.work_date.isoformat(),
+                'shift': r.shift
             })
+
         return jsonify({'entries': entries})
 
-    # --- Dzień ---
+    # -------- DAY --------
     if day:
-        cur.execute("""
-            SELECT login, shift FROM entries
-            WHERE work_date = ?
-            ORDER BY created_at ASC
-        """, (day,))
-        rows = cur.fetchall()
+        try:
+            work_date = datetime.fromisoformat(day).date()
+        except ValueError:
+            return jsonify({'error': 'day must be YYYY-MM-DD'}), 400
+
+        rows = (
+            db.session.query(Entry)
+            .filter(Entry.work_date == work_date)
+            .order_by(Entry.created_at.asc())
+            .all()
+        )
 
         day_shift, night_shift = [], []
 
         for r in rows:
-            emp = employee_lookup.get(r['login'], {})
+            emp = employee_lookup.get(r.login, {})
             entry = {
-                'login': r['login'],
+                'login': r.login,
                 'name': emp.get('name', ''),
                 'shift_pattern': emp.get('shift', '')
             }
-            if r['shift'] == 'night':
+            if r.shift == 'night':
                 night_shift.append(entry)
             else:
                 day_shift.append(entry)
 
         return jsonify({
-            'work_date': day,
+            'work_date': work_date.isoformat(),
             'day_shift': day_shift,
             'night_shift': night_shift
         })
 
-    # --- Tydzień ---
+    # -------- WEEK --------
     if not week_start:
         return jsonify({'error': 'week_start required'}), 400
 
     ws = datetime.fromisoformat(week_start).date()
     dates = week_dates_for_week_start(ws)
 
-    placeholders = ','.join('?' for _ in dates)
-    cur.execute(f"""
-        SELECT login, work_date, shift FROM entries
-        WHERE work_date IN ({placeholders})
-        ORDER BY created_at ASC
-    """, dates)
-    rows = cur.fetchall()
+    rows = (
+        db.session.query(Entry)
+        .filter(Entry.work_date.in_(dates))
+        .order_by(Entry.created_at.asc())
+        .all()
+    )
 
-    per_day = {d: {'day_shift': [], 'night_shift': []} for d in dates}
+    per_day = {d.isoformat(): {'day_shift': [], 'night_shift': []} for d in dates}
+
     for r in rows:
-        if r['shift'] == 'night':
-            per_day[r['work_date']]['night_shift'].append(r['login'])
+        if r.shift == 'night':
+            per_day[r.work_date.isoformat()]['night_shift'].append(r.login)
         else:
-            per_day[r['work_date']]['day_shift'].append(r['login'])
+            per_day[r.work_date.isoformat()]['day_shift'].append(r.login)
 
     return jsonify({'week_start': week_start, 'per_day': per_day})
 
-# --- DELETE ENTRY ---
+# =========================
+# DELETE ENTRY
+# =========================
+
 @app.route('/api/entries/delete', methods=['POST'])
 def api_delete_entry():
     data = request.get_json()
-    login = data.get('login')
-    work_date = data.get('work_date')
+    login = (data.get('login') or '').strip().lower()
+    work_date_str = data.get('work_date')
     shift = data.get('shift')
-    if not login or not work_date or not shift:
-        return jsonify({'error':'missing data'}), 400
 
-    db = get_db()
-    cur = db.cursor()
-    cur.execute('DELETE FROM entries WHERE login=? AND work_date=? AND shift=?', (login, work_date, shift))
-    db.commit()
-    return jsonify({'status':'ok'})
+    if not login or not work_date_str or not shift:
+        return jsonify({'error': 'missing data'}), 400
+
+    try:
+        work_date = datetime.fromisoformat(work_date_str).date()
+    except ValueError:
+        return jsonify({'error': 'work_date must be YYYY-MM-DD'}), 400
+
+    (
+        db.session.query(Entry)
+        .filter(
+            Entry.login == login,
+            Entry.work_date == work_date,
+            Entry.shift == shift
+        )
+        .delete(synchronize_session=False)
+    )
+    db.session.commit()
+
+    return jsonify({'status': 'ok'})
+
+# =========================
+# Local run
+# =========================
 
 if __name__ == '__main__':
-    app.run(debug=True)  # lokalnie
-
-
-
-
-
-
-
+    app.run(debug=True)
