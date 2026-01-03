@@ -543,4 +543,62 @@ h1 {
   #summaryQuarterList { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ================================ */
+/* KWARTAŁ – styl jak tabela miesięczna */
+/* ================================ */
+
+/* mini tabela – reset ciężkich borderów */
+.quarter-mini-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: none;
+  table-layout: fixed;
+}
+
+/* nagłówki kolumn */
+.quarter-mini-table thead th {
+  background-color: #f8f9fa;           /* dokładnie jak bootstrap */
+  font-weight: 600;
+  color: #212529;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* komórki */
+.quarter-mini-table td,
+.quarter-mini-table th {
+  padding: 8px 12px;
+  border-left: none;
+  border-right: none;
+}
+
+/* linie poziome */
+.quarter-mini-table tbody tr td {
+  border-top: 1px solid #dee2e6;
+}
+
+/* naprzemienne wiersze (biały / jasnoszary) */
+.quarter-mini-table tbody tr:nth-child(even) td {
+  background-color: #f8f9fa;
+}
+
+.quarter-mini-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff;
+}
+
+/* wyrównanie kolumn */
+.quarter-mini-table td:nth-child(2),
+.quarter-mini-table th:nth-child(2) {
+  text-align: center;
+}
+
+/* subtelny tekst dla "Brak danych" */
+.quarter-mini-table td {
+  height: 36px;
+}
+
+.quarter-mini-table td em,
+.quarter-mini-table td[style*="opacity"] {
+  color: #6c757d;
+}
 
