@@ -463,17 +463,30 @@ h1 {
 
 /* tabela mini */
 .quarter-mini-table {
-  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: none;
 }
 
 .quarter-mini-table thead th {
   background: #f3f3f3;
   font-weight: 650;
+  border-bottom: 1px solid #dee2e6;
 }
 
 .quarter-mini-table td,
 .quarter-mini-table th {
-  padding: 8px 10px;
+  border-left: none;
+  border-right: none;
+}
+
+.quarter-mini-table tbody tr td {
+  border-top: 1px solid #dee2e6;
+}
+
+/* pierwszy wiersz bez podwójnej linii */
+.quarter-mini-table tbody tr:first-child td {
+  border-top: none;
 }
 
 /* responsywność */
@@ -529,3 +542,4 @@ h1 {
   #summaryMonthList { grid-template-columns: repeat(3, 1fr); }
   #summaryQuarterList { grid-template-columns: repeat(2, 1fr); }
 }
+
