@@ -240,12 +240,22 @@ function renderShiftTables(data){
 
 // --- Inicjalizacja ---
 window.addEventListener('load', () => {
-    // istniejące inicjalizacje
     loadWeeks();
+
     document.getElementById('addBtn').addEventListener('click', addEntry);
-    document.getElementById('loginInput').addEventListener('keypress', e => { if(e.key==='Enter') addEntry(); });
-    document.getElementById('dayShiftHeader').addEventListener('click', () => { activeShift='day'; highlightActiveShift(); });
-    document.getElementById('nightShiftHeader').addEventListener('click', () => { activeShift='night'; highlightActiveShift(); });
+    document.getElementById('loginInput').addEventListener('keypress', e => {
+        if (e.key === 'Enter') addEntry();
+    });
+
+    document.getElementById('dayShiftHeader').addEventListener('click', () => {
+        activeShift = 'day';
+        highlightActiveShift();
+    });
+
+    document.getElementById('nightShiftHeader').addEventListener('click', () => {
+        activeShift = 'night';
+        highlightActiveShift();
+    });
 
     // --- kliknięcie gdziekolwiek odznacza wiersz do usunięcia ---
     document.addEventListener('click', (e) => {
@@ -253,6 +263,13 @@ window.addEventListener('load', () => {
             rowSelectedForDelete.classList.remove('selected-for-delete');
             rowSelectedForDelete = null;
         }
+    });
+
+    // --- kliknięcie gdziekolwiek chowa komunikat o duplikacie ---
+    document.addEventListener('click', (e) => {
+        const msg = document.getElementById('loginFeedback');
+        if (msg && msg.contains(e.target)) return; // klik w sam komunikat – nic nie rób
+        clearLoginMessage();
     });
 });
 
@@ -320,5 +337,6 @@ function renderMonthEntries(entries) {
 window.addEventListener('load',()=>{
   loadSummaryMonths();
 });
+
 
 
