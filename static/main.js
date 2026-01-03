@@ -124,21 +124,35 @@ function highlightActiveShift(){
 
 // --- Dodawanie wpisu ---
 function addEntry(){
+    clearLoginMessage();
+
     const loginInput=document.getElementById('loginInput');
     const login=loginInput.value.trim();
-    if(!login||!selectedDay){alert('Wybierz dzień'); return;}
-    if(!activeShift){alert('Wybierz shift'); return;}
+    if(!login||!selectedDay){ alert('Wybierz dzień'); return; }
+    if(!activeShift){ alert('Wybierz shift'); return; }
 
     fetch('/api/entries',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({login,work_date:selectedDay,shift:activeShift})
-    }).then(r=>{
+    }).then(async r=>{
         if(r.ok){
             loginInput.value='';
             const rowEl=document.querySelector(`.clickable-day[data-day="${selectedDay}"]`);
             selectDay(selectedDay,rowEl);
-        } else {r.json().then(j=>alert(j.error||'Błąd'));}
+            return;
+        }
+
+        // tylko duplikat pokazujemy pod inputem
+        if (r.status === 409) {
+            const j = await r.json().catch(()=>({}));
+            showLoginMessage(j.error || 'Duplikat wpisu.');
+            return;
+        }
+
+        // resztę zostawiamy jak było
+        const j = await r.json().catch(()=>({}));
+        alert(j.error || 'Błąd');
     });
 }
 
@@ -306,4 +320,5 @@ function renderMonthEntries(entries) {
 window.addEventListener('load',()=>{
   loadSummaryMonths();
 });
+
 
