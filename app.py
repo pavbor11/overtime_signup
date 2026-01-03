@@ -70,17 +70,22 @@ with app.app_context():
 # ----------------------------
 def load_employee_lookup():
     lookup_dict = {}
-    with open(CSV_PATH, newline="", encoding="utf-8") as csvfile:
-        reader = csv.DictReader(csvfile, delimiter="\t")
-        for row in reader:
-            login = row["User ID"].strip().lower()
-            lookup_dict[login] = {
-                "name": row.get("Employee Name", ""),
-                "shift": row.get("Shift Pattern", "")
-            }
-    return lookup_dict
 
-employee_lookup = load_employee_lookup()
+    with open(CSV_PATH, newline="", encoding="utf-8-sig") as csvfile:
+        reader = csv.DictReader(csvfile)  # CSV z przecinkami
+
+        for row in reader:
+            login = row.get("User ID", "").strip().lower()
+            if not login:
+                continue
+
+            lookup_dict[login] = {
+                "name": row.get("Employee Name", "").strip(),
+                "shift": row.get("Shift Pattern", "").strip(),
+                "manager": row.get("Menago", "").strip(),
+            }
+
+    return lookup_dict
 
 # ----------------------------
 # Utilities
@@ -258,3 +263,4 @@ def api_delete_entry():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
