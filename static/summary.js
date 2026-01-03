@@ -1,73 +1,192 @@
-// --- Dane miesięcy ---
-const months = [
-  {num:1, name:'Styczeń'},
-  {num:2, name:'Luty'},
-  {num:3, name:'Marzec'},
-  {num:4, name:'Kwiecień'},
-  {num:5, name:'Maj'},
-  {num:6, name:'Czerwiec'},
-  {num:7, name:'Lipiec'},
-  {num:8, name:'Sierpień'},
-  {num:9, name:'Wrzesień'},
-  {num:10, name:'Październik'},
-  {num:11, name:'Listopad'},
-  {num:12, name:'Grudzień'}
+// ===============================
+// PODSUMOWANIE: miesiące + kwartały
+// ===============================
+
+// --- Miesiące (bez zmian w logice) ---
+const SummaryMonths = [
+  'Styczeń','Luty','Marzec','Kwiecień','Maj','Czerwiec',
+  'Lipiec','Sierpień','Wrzesień','Październik','Listopad','Grudzień'
 ];
 
-let selectedMonth = null;
+let summarySelectedMonth = null;
 
-// --- Render listy miesięcy ---
-function renderMonths() {
-    const container = document.getElementById('monthsContainer');
-    container.innerHTML = '';
-    months.forEach(m=>{
-        const btn = document.createElement('button');
-        btn.className = 'btn btn-outline-primary';
-        btn.innerText = m.name;
-        btn.dataset.month = m.num;
-        btn.addEventListener('click',()=>selectMonth(m.num, btn));
-        container.appendChild(btn);
-    });
-}
+// --- Kwartały ---
+const SummaryQuarters = [
+  {q: 1, name: 'Kwartał 1'},
+  {q: 2, name: 'Kwartał 2'},
+  {q: 3, name: 'Kwartał 3'},
+  {q: 4, name: 'Kwartał 4'}
+];
 
-// --- Wybór miesiąca ---
-function selectMonth(monthNum, btnElement) {
-    selectedMonth = monthNum;
+let summarySelectedQuarter = null;
 
-    // Odznacz poprzednio zaznaczone
-    document.querySelectorAll('#monthsContainer button').forEach(b=>b.classList.remove('active'));
-    btnElement.classList.add('active');
+// Kolejność i nazwy tabel (6 sztuk)
+// Uwaga: podałeś 5 imion, a chcesz 6 tabel -> dodaję "Inni" jako 6-tą
+const SummaryManagerOrder = ["Paweł","Michał","Mariia","Aleksy Piotr","Daria","Inni"];
 
-    loadMonthEntries(monthNum);
-}
-
-// --- Pobranie wpisów dla miesiąca ---
-function loadMonthEntries(monthNum) {
-    fetch(`/api/entries?month=${monthNum}`)
-        .then(r=>r.json())
-        .then(data=>{
-            renderMonthEntriesTable(data.entries);
-        });
-}
-
-// --- Render tabeli ---
-function renderMonthEntriesTable(entries) {
-    const tbody = document.querySelector('#monthEntriesTable tbody');
-    tbody.innerHTML = '';
-    entries.forEach(e=>{
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${formatDateDMY(e.work_date)}</td><td>${e.login}</td><td>${e.name || ''}</td><td>${e.shift}</td>`;
-        tbody.appendChild(tr);
-    });
-}
-
-// --- Format daty (używamy z main.js) ---
-function formatDateDMY(dateStr) {
+// ============ helpers ============
+function summaryFormatDateDMY(dateStr) {
   const dt = new Date(dateStr);
   return `${String(dt.getDate()).padStart(2,'0')}-${String(dt.getMonth()+1).padStart(2,'0')}-${dt.getFullYear()}`;
 }
 
-// --- Inicjalizacja ---
-window.addEventListener('load',()=>{
-    renderMonths();
+function showMonthView() {
+  summarySelectedQuarter = null;
+
+  // odznacz kwartaly
+  document.querySelectorAll('.quarter-btn').forEach(b=>b.classList.remove('active'));
+
+  // pokaż duża tabela, schowaj kwartalne
+  const big = document.getElementById('summaryTableContainer');
+  const qbox = document.getElementById('quarterTablesContainer');
+  if (big) big.style.display = 'block';
+  if (qbox) qbox.style.display = 'none';
+}
+
+function showQuarterView() {
+  const big = document.getElementById('summaryTableContainer');
+  const qbox = document.getElementById('quarterTablesContainer');
+  if (big) big.style.display = 'none';
+  if (qbox) qbox.style.display = 'grid';
+}
+
+// ============ miesiące ============
+function loadSummaryMonths() {
+  const container = document.getElementById('summaryMonthList');
+  container.innerHTML = '';
+
+  SummaryMonths.forEach((m,i)=>{
+    const btn = document.createElement('button');
+    btn.className = 'btn btn-outline-primary btn-sm m-1 month-btn';
+    btn.innerText = m;
+    btn.dataset.month = i+1;
+    btn.addEventListener('click', ()=>selectSummaryMonth(i+1, btn));
+    container.appendChild(btn);
+  });
+}
+
+function selectSummaryMonth(month, btn) {
+  showMonthView();
+
+  summarySelectedMonth = month;
+  document.querySelectorAll('.month-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+
+  fetch(`/api/entries?month=${month}`)
+    .then(r=>r.json())
+    .then(data=>{
+      renderMonthEntries(data.entries || []);
+    });
+}
+
+function renderMonthEntries(entries) {
+  const container = document.getElementById('summaryTableContainer');
+  if (!container) return;
+
+  if(entries.length === 0){
+    container.innerHTML = '<p>Brak wpisów w tym miesiącu.</p>';
+    return;
+  }
+
+  let html = `<table class="table table-bordered table-striped">
+      <thead><tr>
+        <th>Login</th>
+        <th>Name</th>
+        <th>Work Date</th>
+        <th>Shift</th>
+      </tr></thead><tbody>`;
+
+  entries.forEach(e=>{
+    html += `<tr>
+      <td>${e.login}</td>
+      <td>${e.name || ''}</td>
+      <td>${summaryFormatDateDMY(e.work_date)}</td>
+      <td>${e.shift}</td>
+    </tr>`;
+  });
+
+  html += '</tbody></table>';
+  container.innerHTML = html;
+}
+
+// ============ kwartały ============
+function loadSummaryQuarters() {
+  const container = document.getElementById('summaryQuarterList');
+  container.innerHTML = '';
+
+  SummaryQuarters.forEach(item => {
+    const btn = document.createElement('button');
+    btn.className = 'btn btn-outline-primary btn-sm m-1 quarter-btn';
+    btn.innerText = item.name;
+    btn.dataset.q = item.q;
+    btn.addEventListener('click', ()=>selectSummaryQuarter(item.q, btn));
+    container.appendChild(btn);
+  });
+}
+
+function selectSummaryQuarter(q, btn) {
+  summarySelectedQuarter = q;
+
+  // odznacz miesiące (bo jesteśmy w kwartale)
+  document.querySelectorAll('.month-btn').forEach(b=>b.classList.remove('active'));
+
+  document.querySelectorAll('.quarter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+
+  showQuarterView();
+
+  const year = new Date().getFullYear();
+  fetch(`/api/summary/quarter?q=${q}&year=${year}`)
+    .then(r=>r.json())
+    .then(data=>{
+      renderQuarterTables(data.per_manager || {}, data.quarter, data.year);
+    });
+}
+
+function renderQuarterTables(perManager, q, year) {
+  const container = document.getElementById('quarterTablesContainer');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  SummaryManagerOrder.forEach(mgr => {
+    const rows = perManager[mgr] || [];
+
+    const card = document.createElement('div');
+    card.className = 'quarter-table-card';
+
+    let html = `
+      <div class="quarter-table-header">${mgr}</div>
+      <table class="table table-bordered quarter-mini-table">
+        <thead>
+          <tr>
+            <th>Login</th>
+            <th>Ilość</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+    if (rows.length === 0) {
+      html += `<tr><td colspan="2" style="text-align:center; opacity:0.7;">Brak danych</td></tr>`;
+    } else {
+      rows.forEach(r => {
+        html += `<tr>
+          <td>${r.login}</td>
+          <td style="text-align:center;">${r.count}</td>
+        </tr>`;
+      });
+    }
+
+    html += `</tbody></table>`;
+    card.innerHTML = html;
+    container.appendChild(card);
+  });
+}
+
+// --- init ---
+window.addEventListener('load', () => {
+  loadSummaryMonths();
+  loadSummaryQuarters();
+  showMonthView(); // domyślnie miesiące
 });
