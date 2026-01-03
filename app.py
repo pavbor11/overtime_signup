@@ -1,37 +1,40 @@
-from flask import Flask, render_template, request, jsonify
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import extract, UniqueConstraint
-from sqlalchemy.exc import IntegrityError
-from sqlalchemy import extract, UniqueConstraint, func
-from datetime import datetime, timedelta, date
+from __future__ import annotations
+
 import os
 import csv
+from datetime import datetime, timedelta, date
+
+from flask import Flask, render_template, request, jsonify
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import extract, UniqueConstraint, func
+from sqlalchemy.exc import IntegrityError
+
 
 BASE_DIR = os.path.dirname(__file__)
 CSV_PATH = os.path.join(BASE_DIR, "data", "employeeList.csv")
 
 app = Flask(__name__)
 
-# ----------------------------
-# Database configuration
-# ----------------------------
-def normalize_database_url(url: str | None) -> str:
-    if not url:
-        sqlite_path = os.path.join(BASE_DIR, "data", "overtime.db")
-        os.makedirs(os.path.dirname(sqlite_path), exist_ok=True)
-        return f"sqlite:///{sqlite_path}"
 
+# ----------------------------
+# Database configuration (Render-only Postgres)
+# ----------------------------
+def normalize_database_url(url: str) -> str:
     url = url.strip()
-
     if url.startswith("postgres://"):
         return url.replace("postgres://", "postgresql+psycopg://", 1)
-
     if url.startswith("postgresql://"):
         return url.replace("postgresql://", "postgresql+psycopg://", 1)
-
     return url
 
-app.config["SQLALCHEMY_DATABASE_URI"] = normalize_database_url(os.environ.get("DATABASE_URL"))
+
+db_url = os.environ.get("DATABASE_URL")
+if not db_url:
+    raise RuntimeError(
+        "DATABASE_URL is not set. This app is configured to run only with Render Postgres."
+    )
+
+app.config["SQLALCHEMY_DATABASE_URI"] = normalize_database_url(db_url)
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
     "pool_pre_ping": True,
@@ -39,6 +42,7 @@ app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
 }
 
 db = SQLAlchemy(app)
+
 
 # ----------------------------
 # Models
@@ -55,36 +59,44 @@ class Entry(db.Model):
     shift = db.Column(db.String(20), nullable=False, default="day")
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
+
 # ----------------------------
 # CSV LOOKUP
 # ----------------------------
-def load_employee_lookup():
-    lookup_dict = {}
+def load_employee_lookup() -> dict[str, dict[str, str]]:
+    lookup_dict: dict[str, dict[str, str]] = {}
     with open(CSV_PATH, newline="", encoding="utf-8-sig") as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            login = row.get("User ID", "").strip().lower()
+            login = (row.get("User ID", "") or "").strip().lower()
             if not login:
                 continue
             lookup_dict[login] = {
-                "name": row.get("Employee Name", "").strip(),
-                "shift": row.get("Shift Pattern", "").strip(),
-                "manager": row.get("Menago", "").strip(),
+                "name": (row.get("Employee Name", "") or "").strip(),
+                "shift": (row.get("Shift Pattern", "") or "").strip(),
+                "manager": (row.get("Menago", "") or "").strip(),
             }
     return lookup_dict
 
-# ważne: inicjalizacja
+
 try:
     employee_lookup = load_employee_lookup()
 except Exception as e:
     print("Employee CSV load error:", e)
     employee_lookup = {}
 
+
 # ----------------------------
 # Utilities
 # ----------------------------
 def week_dates_for_week_start(sunday_date: date):
     return [sunday_date + timedelta(days=i) for i in range(7)]
+
+
+def norm_manager(s: str | None) -> str:
+    # trim + collapse spaces + lower
+    return " ".join((s or "").strip().split()).lower()
+
 
 # ----------------------------
 # Routes
@@ -93,9 +105,11 @@ def week_dates_for_week_start(sunday_date: date):
 def index():
     return render_template("index.html")
 
+
 @app.route("/api/weeks")
 def api_weeks():
     today = date.today()
+    # python weekday(): Mon=0..Sun=6
     days_to_sunday = today.weekday() + 1 if today.weekday() < 6 else 0
     current_sunday = today - timedelta(days=days_to_sunday)
 
@@ -108,6 +122,7 @@ def api_weeks():
             "pretty": s.strftime("%d/%m/%Y")
         })
     return jsonify(weeks)
+
 
 @app.route("/api/entries", methods=["GET", "POST"])
 def api_entries():
@@ -233,6 +248,7 @@ def api_entries():
 
     return jsonify({"week_start": week_start, "per_day": per_day})
 
+
 @app.route("/api/entries/delete", methods=["POST"])
 def api_delete_entry():
     data = request.get_json() or {}
@@ -257,9 +273,12 @@ def api_delete_entry():
 
     return jsonify({"status": "ok"})
 
+
+# ----------------------------
+# Quarter summary endpoint
+# ----------------------------
 @app.route("/api/summary/quarter")
 def api_summary_quarter():
-    # kwartal: 1..4 (wymagany)
     q = request.args.get("q")
     year = request.args.get("year")
 
@@ -270,13 +289,11 @@ def api_summary_quarter():
     except Exception:
         return jsonify({"error": "q must be 1-4"}), 400
 
-    # domyślnie bieżący rok
     try:
         year_int = int(year) if year else date.today().year
     except Exception:
         return jsonify({"error": "year must be an integer"}), 400
 
-    # mapowanie kwartal -> miesiace
     quarter_months = {
         1: [1, 2, 3],
         2: [4, 5, 6],
@@ -284,10 +301,28 @@ def api_summary_quarter():
         4: [10, 11, 12],
     }[q_int]
 
-    # 6 tabel: 5 konkretnych + "Inni" jako 6-ta (bo podałeś 5 imion, a chcesz 6 tabel)
-    MANAGERS = ["Paweł", "Michał", "Mariia", "Aleksy Piotr", "Daria", "Inni"]
+    # 6 tabel które pokazujesz na froncie
+    MANAGERS = ["Paweł", "Michał", "Mariia", "Aleksy", "Piotr", "Daria"]
+    OTHER_BUCKET = "Inni"
 
-    # policz wpisy per login w kwartale
+    per_manager = {m: [] for m in MANAGERS}
+    per_manager[OTHER_BUCKET] = []
+
+    # Mapowanie "jak w CSV" -> "jak ma być w tabelach"
+    # (CSV ma imiona bez polskich znaków: Pawel, Michal)
+    manager_aliases = {
+        "pawel": "Paweł",
+        "michal": "Michał",
+        "mariia": "Mariia",
+        "daria": "Daria",
+        "piotr": "Piotr",
+        "aleksy": "Aleksy",
+    }
+
+    def resolve_manager(mgr_raw: str | None) -> str:
+        key = norm_manager(mgr_raw)
+        return manager_aliases.get(key, OTHER_BUCKET)
+
     rows = (
         db.session.query(Entry.login, func.count(Entry.id).label("cnt"))
         .filter(extract("year", Entry.work_date) == year_int)
@@ -296,24 +331,13 @@ def api_summary_quarter():
         .all()
     )
 
-    # przygotuj kubełki per menago
-    per_manager = {m: [] for m in MANAGERS}
-
-    # funkcja normalizacji menago z CSV
-    def norm(s: str) -> str:
-        return " ".join((s or "").strip().split()).lower()
-
-    managers_norm = {norm(m): m for m in MANAGERS if m != "Inni"}
-
     for login, cnt in rows:
-        emp = employee_lookup.get((login or "").lower(), {})
-        mgr_raw = emp.get("manager", "")
-        mgr_key = norm(mgr_raw)
+        login_l = (login or "").strip().lower()
+        emp = employee_lookup.get(login_l, {})
+        mgr = resolve_manager(emp.get("manager", ""))
 
-        mgr = managers_norm.get(mgr_key, "Inni")
         per_manager[mgr].append({
-            "login": login,
-            "name": emp.get("name", ""),
+            "login": login_l,
             "count": int(cnt),
         })
 
@@ -329,11 +353,11 @@ def api_summary_quarter():
         "per_manager": per_manager
     })
 
+
+# Create tables if they do not exist (simple setup; ok for small app)
+with app.app_context():
+    db.create_all()
+
+
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-
-
-
-
