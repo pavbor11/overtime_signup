@@ -1,103 +1,133 @@
-{% extends 'layout.html' %}
-{% block content %}
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Overtime App</title>
 
-<h1>Overtime Tool Wro4</h1>
+  <!-- Bootstrap (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<ul class="nav nav-tabs mb-3" role="tablist">
-  <li class="nav-item">
-    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#week" type="button" role="tab">
-      Wybór tygodnia
-    </button>
-  </li>
-  <li class="nav-item">
-    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#summary" type="button" role="tab">
-      Podsumowanie
-    </button>
-  </li>
-</ul>
+  <!-- Twój CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 
-<div class="tab-content mt-3">
-  <div class="tab-pane fade show active" id="week" role="tabpanel">
-    <div class="align-tables">
+<body class="container-fluid">
 
-      <!-- Lista tygodni -->
-      <div style="flex: 0 0 16%; max-width:16%;">
-        <h5 class="center-header">Tygodnie</h5>
-        <div id="weeksList" class="list-group"></div>
+  <!-- Logo / nagłówek -->
+  <img id="pageLogo" src="{{ url_for('static', filename='logo.png') }}" alt="Logo" />
+  <h1>Overtime</h1>
+
+  <!-- Zakładki -->
+  <ul class="nav nav-tabs" id="mainTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="tab-week" data-bs-toggle="tab" data-bs-target="#pane-week" type="button" role="tab">
+        Tygodnie
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-summary" data-bs-toggle="tab" data-bs-target="#pane-summary" type="button" role="tab">
+        Podsumowanie
+      </button>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+
+    <!-- ===================== -->
+    <!-- TAB: Tygodnie -->
+    <!-- ===================== -->
+    <div class="tab-pane fade show active" id="pane-week" role="tabpanel">
+
+      <div class="align-tables mt-4">
+        <!-- Lista tygodni -->
+        <div style="min-width:220px; max-width:260px;">
+          <div class="center-header">WEEK LIST</div>
+          <div id="weeksList" class="list-group"></div>
+        </div>
+
+        <!-- Tabela tygodnia -->
+        <div style="flex:1;">
+          <div id="weekTableContainer"></div>
+
+          <!-- Formularz dodawania loginu (pokazuje się po wyborze dnia) -->
+          <div id="loginContainer" style="display:none;" class="mt-3">
+
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <input id="loginInput" class="form-control" placeholder="Wpisz login..." style="max-width:320px;">
+              <button id="addBtn" class="btn btn-primary">Dodaj</button>
+            </div>
+
+            <div id="loginFeedback" class="alert alert-warning py-2" style="display:none;"></div>
+
+            <!-- Shift tables -->
+            <div id="shiftsContainer">
+
+              <div id="dayShiftContainer" style="display:none; flex-direction:column;">
+                <div id="dayShiftHeader" class="shift-header">DAY SHIFT</div>
+                <table class="table shift-table" id="dayShiftTable">
+                  <thead>
+                    <tr>
+                      <th>Login</th><th>Name</th><th>Shift pattern</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+
+              <div id="nightShiftContainer" style="display:none; flex-direction:column;">
+                <div id="nightShiftHeader" class="shift-header">NIGHT SHIFT</div>
+                <table class="table shift-table" id="nightShiftTable">
+                  <thead>
+                    <tr>
+                      <th>Login</th><th>Name</th><th>Shift pattern</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
       </div>
+    </div>
 
-      <!-- Tabela tygodnia + Day/Night -->
-      <div style="flex: 1;">
-        <div id="weekTableContainer"></div>
+    <!-- ===================== -->
+    <!-- TAB: Podsumowanie -->
+    <!-- ===================== -->
+    <div class="tab-pane fade" id="pane-summary" role="tabpanel">
 
-        <!-- LOGIN + SHIFTY -->
-        <div id="loginContainer" style="display:none; margin-top:20px;">
+      <div class="mt-4">
 
-          <!-- INPUT LOGIN – NAD TABELAMI -->
-          <label for="loginInput" class="form-label">Login</label>
-          <div class="input-group mb-3">
-            <input id="loginInput" class="form-control" placeholder="np. jan.kowalski">
-            <button id="addBtn" class="btn btn-primary">Dodaj</button>
-          </div>
-          <div id="loginFeedback" class="text-danger small" style="display:none;"></div>
+        <!-- Kafelki kwartalne -->
+        <div id="summaryQuarterList" class="mb-2"></div>
 
-          <!-- TABELE DAY / NIGHT -->
-          <div id="shiftsContainer" style="display:flex; gap:20px; justify-content:center;">
+        <!-- Kafelki miesięcy -->
+        <div id="summaryMonthList" class="mb-3"></div>
 
-            <!-- DAY SHIFT -->
-            <div id="dayShiftContainer" style="flex:1; display:flex; flex-direction:column;">
-              <div id="dayShiftHeader" class="shift-header clickable-shift">
-                Day Shift
-              </div>
-              <table class="table table-striped shift-table" id="dayShiftTable">
-                <thead>
-                  <tr>
-                    <th>Login</th>
-                    <th>Name</th>
-                    <th>Shift Pattern</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
+        <!-- Jeden kontener na tabele -->
+        <div id="summaryTablesWrapper">
+          <!-- Duża tabela -->
+          <div id="summaryTableContainer"></div>
 
-            <!-- NIGHT SHIFT -->
-            <div id="nightShiftContainer" style="flex:1; display:flex; flex-direction:column;">
-              <div id="nightShiftHeader" class="shift-header clickable-shift">
-                Night Shift
-              </div>
-              <table class="table table-striped shift-table" id="nightShiftTable">
-                <thead>
-                  <tr>
-                    <th>Login</th>
-                    <th>Name</th>
-                    <th>Shift Pattern</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
-
-          </div>
+          <!-- 6 małych tabel -->
+          <div id="quarterTablesContainer" style="display:none;"></div>
         </div>
 
       </div>
+
     </div>
   </div>
 
+  <div id="copyright">©</div>
 
-  <div id="summary" class="tab-pane fade" role="tabpanel">
-    <h5 id="summaryWeekLabel">Podsumowanie miesięczne</h5>
-    <div id="summaryMonthList" class="mb-3"></div>
-    <div id="summaryTableContainer"></div>
-</div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  </div>
-
-  <div id="copyright">
-    Copyright @pborowie dla wro4
-  </div>
-</div>
-
-{% endblock %}
-
+  <!-- Twoje skrypty -->
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+  <script src="{{ url_for('static', filename='summary.js') }}"></script>
+</body>
+</html>
