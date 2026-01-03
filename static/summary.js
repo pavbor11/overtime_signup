@@ -199,6 +199,3 @@ window.addEventListener('load', () => {
   loadSummaryQuarters();
   showMonthView(); // domyślnie miesiące
 });
-
-
-
