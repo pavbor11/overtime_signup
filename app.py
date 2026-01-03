@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import extract
+from sqlalchemy import extract, UniqueConstraint
+from sqlalchemy.exc import IntegrityError
 from datetime import datetime, timedelta, date
 import os
 import csv
@@ -14,15 +15,7 @@ app = Flask(__name__)
 # Database configuration
 # ----------------------------
 def normalize_database_url(url: str | None) -> str:
-    """
-    Render często daje DATABASE_URL jako:
-      - postgres://...
-      - postgresql://...
-    Dla SQLAlchemy + psycopg (v3) ustawiamy jawnie driver:
-      postgresql+psycopg://...
-    """
     if not url:
-        # lokalny fallback (dev)
         sqlite_path = os.path.join(BASE_DIR, "data", "overtime.db")
         os.makedirs(os.path.dirname(sqlite_path), exist_ok=True)
         return f"sqlite:///{sqlite_path}"
@@ -35,13 +28,10 @@ def normalize_database_url(url: str | None) -> str:
     if url.startswith("postgresql://"):
         return url.replace("postgresql://", "postgresql+psycopg://", 1)
 
-    # jeśli masz już np. postgresql+psycopg:// to zostaw
     return url
 
 app.config["SQLALCHEMY_DATABASE_URI"] = normalize_database_url(os.environ.get("DATABASE_URL"))
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-
-# sensowne opcje dla Render/Postgres
 app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
     "pool_pre_ping": True,
     "pool_recycle": 300,
@@ -54,6 +44,9 @@ db = SQLAlchemy(app)
 # ----------------------------
 class Entry(db.Model):
     __tablename__ = "entries"
+    __table_args__ = (
+        UniqueConstraint("login", "work_date", name="uq_entries_login_work_date"),
+    )
 
     id = db.Column(db.Integer, primary_key=True)
     login = db.Column(db.String(255), nullable=False, index=True)
@@ -61,33 +54,40 @@ class Entry(db.Model):
     shift = db.Column(db.String(20), nullable=False, default="day")
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
-# Tworzymy tabele (idempotentnie). Na Renderze to zadziała na Postgresie.
-with app.app_context():
-    db.create_all()
-
 # ----------------------------
 # CSV LOOKUP
 # ----------------------------
 def load_employee_lookup():
     lookup_dict = {}
-
     with open(CSV_PATH, newline="", encoding="utf-8-sig") as csvfile:
-        reader = csv.DictReader(csvfile)  # CSV z przecinkami
-
+        reader = csv.DictReader(csvfile)
         for row in reader:
             login = row.get("User ID", "").strip().lower()
             if not login:
                 continue
-
             lookup_dict[login] = {
                 "name": row.get("Employee Name", "").strip(),
                 "shift": row.get("Shift Pattern", "").strip(),
                 "manager": row.get("Menago", "").strip(),
             }
-
     return lookup_dict
 
-employee_lookup = load_employee_lookup()
+# ważne: inicjalizacja
+try:
+    employee_lookup = load_employee_lookup()
+except Exception as e:
+    print("Employee CSV load error:", e)
+    employee_lookup = {}
+
+# ----------------------------
+# Migration/reset (opcjonalnie)
+# Użyj tylko na czas migracji:
+# ustaw na Renderze RESET_DB=1, zrestartuj, potem usuń RESET_DB
+# ----------------------------
+with app.app_context():
+    if os.environ.get("RESET_DB") == "1":
+        db.drop_all()
+    db.create_all()
 
 # ----------------------------
 # Utilities
@@ -135,14 +135,15 @@ def api_entries():
         except ValueError:
             return jsonify({"error": "work_date must be ISO format YYYY-MM-DD"}), 400
 
-        e = Entry(
-            login=login,
-            work_date=wd,
-            shift=shift,
-            created_at=datetime.utcnow()
-        )
+        e = Entry(login=login, work_date=wd, shift=shift, created_at=datetime.utcnow())
         db.session.add(e)
-        db.session.commit()
+
+        try:
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
+            return jsonify({"error": "Duplikat: ten login jest już dodany dla tej daty."}), 409
+
         return jsonify({"status": "ok"})
 
     # --- GET ---
@@ -253,7 +254,6 @@ def api_delete_entry():
     except ValueError:
         return jsonify({"error": "work_date must be ISO format YYYY-MM-DD"}), 400
 
-    # kasujemy wszystkie pasujące (tak jak wcześniej)
     db.session.query(Entry).filter(
         Entry.login == login,
         Entry.work_date == wd,
@@ -265,5 +265,3 @@ def api_delete_entry():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
