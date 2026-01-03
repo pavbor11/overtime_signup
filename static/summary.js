@@ -20,9 +20,8 @@ const SummaryQuarters = [
 
 let summarySelectedQuarter = null;
 
-// Kolejność i nazwy tabel (6 sztuk)
-// Uwaga: podałeś 5 imion, a chcesz 6 tabel -> dodaję "Inni" jako 6-tą
-const SummaryManagerOrder = ["Paweł","Michał","Mariia","Aleksy Piotr","Daria","Inni"];
+// 6 tabel dokładnie jak chcesz:
+const SummaryManagerOrder = ["Paweł","Michał","Mariia","Aleksy","Piotr","Daria"];
 
 // ============ helpers ============
 function summaryFormatDateDMY(dateStr) {
@@ -53,6 +52,8 @@ function showQuarterView() {
 // ============ miesiące ============
 function loadSummaryMonths() {
   const container = document.getElementById('summaryMonthList');
+  if (!container) return;
+
   container.innerHTML = '';
 
   SummaryMonths.forEach((m,i)=>{
@@ -112,6 +113,8 @@ function renderMonthEntries(entries) {
 // ============ kwartały ============
 function loadSummaryQuarters() {
   const container = document.getElementById('summaryQuarterList');
+  if (!container) return;
+
   container.innerHTML = '';
 
   SummaryQuarters.forEach(item => {
@@ -139,11 +142,11 @@ function selectSummaryQuarter(q, btn) {
   fetch(`/api/summary/quarter?q=${q}&year=${year}`)
     .then(r=>r.json())
     .then(data=>{
-      renderQuarterTables(data.per_manager || {}, data.quarter, data.year);
+      renderQuarterTables(data.per_manager || {});
     });
 }
 
-function renderQuarterTables(perManager, q, year) {
+function renderQuarterTables(perManager) {
   const container = document.getElementById('quarterTablesContainer');
   if (!container) return;
 
