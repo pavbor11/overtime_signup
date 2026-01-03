@@ -87,6 +87,8 @@ def load_employee_lookup():
 
     return lookup_dict
 
+employee_lookup = load_employee_lookup()
+
 # ----------------------------
 # Utilities
 # ----------------------------
@@ -263,4 +265,5 @@ def api_delete_entry():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
