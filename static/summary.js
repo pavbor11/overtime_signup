@@ -160,7 +160,7 @@ function renderQuarterTables(perManager) {
 
     let html = `
       <div class="quarter-table-header">${mgr}</div>
-      <table class="table table-bordered quarter-mini-table">
+      <table class="table quarter-mini-table">
         <thead>
           <tr>
             <th>Login</th>
@@ -170,15 +170,21 @@ function renderQuarterTables(perManager) {
         <tbody>
     `;
 
-    if (rows.length === 0) {
-      html += `<tr><td colspan="2" style="text-align:center; opacity:0.7;">Brak danych</td></tr>`;
-    } else {
-      rows.forEach(r => {
+    // ZAWSZE 5 wierszy
+    for (let i = 0; i < 5; i++) {
+      const r = rows[i];
+
+      if (r) {
         html += `<tr>
           <td>${r.login}</td>
           <td style="text-align:center;">${r.count}</td>
         </tr>`;
-      });
+      } else {
+        html += `<tr>
+          <td style="opacity:0.6; font-style:italic;">Brak danych</td>
+          <td style="text-align:center; opacity:0.6;">–</td>
+        </tr>`;
+      }
     }
 
     html += `</tbody></table>`;
@@ -193,4 +199,5 @@ window.addEventListener('load', () => {
   loadSummaryQuarters();
   showMonthView(); // domyślnie miesiące
 });
+
 
