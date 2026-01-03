@@ -17,6 +17,20 @@ function getWeekNumber(d) {
     return Math.ceil((days + firstJan.getDay()+1)/7);
 }
 
+function showLoginMessage(text) {
+  const el = document.getElementById('loginFeedback');
+  if (!el) return;
+  el.textContent = text;
+  el.style.display = 'block';
+}
+
+function clearLoginMessage() {
+  const el = document.getElementById('loginFeedback');
+  if (!el) return;
+  el.textContent = '';
+  el.style.display = 'none';
+}
+
 // --- Ładowanie tygodni ---
 function loadWeeks() {
     fetch('/api/weeks')
@@ -292,3 +306,4 @@ function renderMonthEntries(entries) {
 window.addEventListener('load',()=>{
   loadSummaryMonths();
 });
+
