@@ -334,7 +334,7 @@ h1 {
 /* ================================ */
 
 #summaryTableContainer table {
-  width: 89.3%;
+  width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid #dee2e6;
@@ -542,4 +542,5 @@ h1 {
   #summaryMonthList { grid-template-columns: repeat(3, 1fr); }
   #summaryQuarterList { grid-template-columns: repeat(2, 1fr); }
 }
+
 
