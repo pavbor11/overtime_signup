@@ -143,10 +143,9 @@ function addEntry(){
             return;
         }
 
-        // tylko duplikat pokazujemy pod inputem
-        if (r.status === 409) {
+        if (r.status === 409 || r.status === 422) {
             const j = await r.json().catch(()=>({}));
-            showLoginMessage(j.error || 'Duplikat wpisu.');
+            showLoginMessage(j.error || 'Błąd danych.');
             return;
         }
 
@@ -337,6 +336,7 @@ function renderMonthEntries(entries) {
 window.addEventListener('load',()=>{
   loadSummaryMonths();
 });
+
 
 
 
