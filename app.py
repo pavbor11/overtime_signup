@@ -85,7 +85,7 @@ except Exception as e:
 # ustaw na Renderze RESET_DB=1, zrestartuj, potem usuń RESET_DB
 # ----------------------------
 with app.app_context():
-    if os.environ.get("RESET_DB") == "1":
+    if os.environ.get("RESET_DB") == "0":
         db.drop_all()
     db.create_all()
 
@@ -265,3 +265,4 @@ def api_delete_entry():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
