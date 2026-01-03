@@ -181,7 +181,7 @@ function renderQuarterTables(perManager) {
         </tr>`;
       } else {
         html += `<tr>
-          <td style="opacity:0.6; font-style:italic;">Brak danych</td>
+          <td style="opacity:0.6; font-style:italic;">–</td>
           <td style="text-align:center; opacity:0.6;">–</td>
         </tr>`;
       }
@@ -199,5 +199,6 @@ window.addEventListener('load', () => {
   loadSummaryQuarters();
   showMonthView(); // domyślnie miesiące
 });
+
 
 
