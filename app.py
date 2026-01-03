@@ -121,7 +121,7 @@ def api_entries():
             return jsonify({"error": "login and work_date required"}), 400
 
         if login not in employee_lookup:
-            return jsonify({"error": "Niepoprawny login (brak w employeeList.csv)."}), 422
+            return jsonify({"error": "Niepoprawny login."}), 422
 
         try:
             wd = datetime.fromisoformat(work_date_str).date()
@@ -258,6 +258,7 @@ def api_delete_entry():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
