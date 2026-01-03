@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import extract, UniqueConstraint
 from sqlalchemy.exc import IntegrityError
+from sqlalchemy import extract, UniqueConstraint, func
 from datetime import datetime, timedelta, date
 import os
 import csv
@@ -256,8 +257,81 @@ def api_delete_entry():
 
     return jsonify({"status": "ok"})
 
+@app.route("/api/summary/quarter")
+def api_summary_quarter():
+    # kwartal: 1..4 (wymagany)
+    q = request.args.get("q")
+    year = request.args.get("year")
+
+    try:
+        q_int = int(q)
+        if q_int < 1 or q_int > 4:
+            raise ValueError()
+    except Exception:
+        return jsonify({"error": "q must be 1-4"}), 400
+
+    # domyślnie bieżący rok
+    try:
+        year_int = int(year) if year else date.today().year
+    except Exception:
+        return jsonify({"error": "year must be an integer"}), 400
+
+    # mapowanie kwartal -> miesiace
+    quarter_months = {
+        1: [1, 2, 3],
+        2: [4, 5, 6],
+        3: [7, 8, 9],
+        4: [10, 11, 12],
+    }[q_int]
+
+    # 6 tabel: 5 konkretnych + "Inni" jako 6-ta (bo podałeś 5 imion, a chcesz 6 tabel)
+    MANAGERS = ["Paweł", "Michał", "Mariia", "Aleksy Piotr", "Daria", "Inni"]
+
+    # policz wpisy per login w kwartale
+    rows = (
+        db.session.query(Entry.login, func.count(Entry.id).label("cnt"))
+        .filter(extract("year", Entry.work_date) == year_int)
+        .filter(extract("month", Entry.work_date).in_(quarter_months))
+        .group_by(Entry.login)
+        .all()
+    )
+
+    # przygotuj kubełki per menago
+    per_manager = {m: [] for m in MANAGERS}
+
+    # funkcja normalizacji menago z CSV
+    def norm(s: str) -> str:
+        return " ".join((s or "").strip().split()).lower()
+
+    managers_norm = {norm(m): m for m in MANAGERS if m != "Inni"}
+
+    for login, cnt in rows:
+        emp = employee_lookup.get((login or "").lower(), {})
+        mgr_raw = emp.get("manager", "")
+        mgr_key = norm(mgr_raw)
+
+        mgr = managers_norm.get(mgr_key, "Inni")
+        per_manager[mgr].append({
+            "login": login,
+            "name": emp.get("name", ""),
+            "count": int(cnt),
+        })
+
+    # sortowanie i top 5
+    for m in per_manager:
+        per_manager[m].sort(key=lambda x: (-x["count"], x["login"]))
+        per_manager[m] = per_manager[m][:5]
+
+    return jsonify({
+        "quarter": q_int,
+        "year": year_int,
+        "months": quarter_months,
+        "per_manager": per_manager
+    })
+
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
