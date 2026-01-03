@@ -80,16 +80,6 @@ except Exception as e:
     employee_lookup = {}
 
 # ----------------------------
-# Migration/reset (opcjonalnie)
-# Użyj tylko na czas migracji:
-# ustaw na Renderze RESET_DB=1, zrestartuj, potem usuń RESET_DB
-# ----------------------------
-with app.app_context():
-    if os.environ.get("RESET_DB") == "1":
-        db.drop_all()
-    db.create_all()
-
-# ----------------------------
 # Utilities
 # ----------------------------
 def week_dates_for_week_start(sunday_date: date):
@@ -265,5 +255,6 @@ def api_delete_entry():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
