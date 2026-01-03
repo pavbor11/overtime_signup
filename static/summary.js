@@ -58,7 +58,7 @@ function loadSummaryMonths() {
 
   SummaryMonths.forEach((m,i)=>{
     const btn = document.createElement('button');
-    btn.className = 'btn btn-outline-primary btn-sm m-1 month-btn';
+    btn.className = 'btn btn-outline-primary btn-sm month-btn';
     btn.innerText = m;
     btn.dataset.month = i+1;
     btn.addEventListener('click', ()=>selectSummaryMonth(i+1, btn));
@@ -119,7 +119,7 @@ function loadSummaryQuarters() {
 
   SummaryQuarters.forEach(item => {
     const btn = document.createElement('button');
-    btn.className = 'btn btn-outline-primary btn-sm m-1 quarter-btn';
+    btn.className = 'btn btn-outline-primary btn-sm quarter-btn';
     btn.innerText = item.name;
     btn.dataset.q = item.q;
     btn.addEventListener('click', ()=>selectSummaryQuarter(item.q, btn));
@@ -193,3 +193,4 @@ window.addEventListener('load', () => {
   loadSummaryQuarters();
   showMonthView(); // domyślnie miesiące
 });
+
