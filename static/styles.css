@@ -1,3 +1,7 @@
+/* ===================================== */
+/* GLOBAL / WYBORY */
+/* ===================================== */
+
 /* Podświetlenie wybranego tygodnia i aktywnego dnia/shiftu */
 .selected-week {
   background-color: #db94ff !important;
@@ -20,7 +24,37 @@
   margin-top: 45px; /* odstęp między zakładkami a tabelą */
 }
 
-/* LISTA TYGODNI – CLEAN & SPOJNA */
+/* Nagłówek główny strony */
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  font-weight: 650;
+}
+
+/* Copyright */
+#copyright {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8rem;
+  color: #666;
+  opacity: 0.8;
+}
+
+/* Logo */
+#pageLogo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 120px;
+}
+
+
+/* ===================================== */
+/* LISTA TYGODNI */
+/* ===================================== */
 
 /* Nagłówek listy tygodni */
 .center-header {
@@ -34,7 +68,6 @@
   font-weight: 650;
   background-color: #b3d5f7;
 
-  /* precyzyjne border */
   border-left: 1px solid #dee2e6;
   border-right: 1px solid #dee2e6;
   border-top: 1px solid #dee2e6;
@@ -46,37 +79,30 @@
 
 /* Kontener listy tygodni */
 #weeksList {
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
-  border-top: none;
-
+  border: none;
   border-radius: 0 0 8px 8px;
-
-  /* opcjonalnie: tło dla całej listy */
   background-color: #ffffff;
 }
 
-/* Elementy tygodni w liście (opcjonalnie, jeśli masz np. li lub div) */
+/* Elementy tygodni w liście */
 #weeksList .week-item {
   padding: 10px 12px;
   cursor: pointer;
   transition: background-color 0.25s ease;
 }
 
-/* Hover dla elementów tygodni */
 #weeksList .week-item:hover {
   background-color: rgba(179, 213, 247, 0.18);
 }
 
-/* Aktywny / wybrany tydzień */
 #weeksList .week-item.active {
   background-color: #bd9af6;
   color: #fff;
 }
 
+
 /* ===================================== */
-/* WEEK TABLE – FINAL / CLEAN / STABLE */
+/* WEEK TABLE */
 /* ===================================== */
 
 #weekTableContainer table {
@@ -107,7 +133,7 @@
   border-top-right-radius: 8px;
 }
 
-/* CELLS – BASE */
+/* CELLS */
 #weekTableContainer tbody td {
   padding: 8px 12px;
   border: none;
@@ -115,7 +141,7 @@
   background-color: transparent;
 }
 
-/* ODD / EVEN */
+/* zebra */
 #weekTableContainer tbody tr:nth-child(odd) td {
   background-color: #ffffff;
 }
@@ -124,7 +150,7 @@
   background-color: #f3f3f3;
 }
 
-/* SOFT HOVER */
+/* hover */
 #weekTableContainer tbody tr td {
   transition: background-color 0.25s ease;
 }
@@ -133,14 +159,14 @@
   background-color: rgba(104, 123, 142, 0.18);
 }
 
-/* SELECTED / ACTIVE */
+/* selected */
 #weekTableContainer tbody tr.table-success td,
 #weekTableContainer tbody tr.selected-week td {
   background-color: #db94ff !important;
   color: #ffffff;
 }
 
-/* TEXT ALIGN */
+/* align */
 #weekTableContainer thead th:nth-child(2),
 #weekTableContainer thead th:nth-child(4),
 #weekTableContainer thead th:nth-child(5),
@@ -155,7 +181,7 @@
   text-align: right;
 }
 
-/* ROW SEPARATORS */
+/* row separators */
 #weekTableContainer tbody tr td {
   border-top: 1px solid #dee2e6;
 }
@@ -164,39 +190,15 @@
   border-top: none;
 }
 
-/* HOVER CURSOR */
 #weekTableContainer tbody tr {
   cursor: pointer;
 }
 
-/* Nagłówek główny strony */
-h1 {
-  text-align: center;
-  font-size: 4rem;
-  margin-top: 1.5rem;
-  margin-bottom: 3rem;
-  font-weight: 650;
-}
 
-/* Copyright */
-#copyright {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  font-size: 0.8rem;
-  color: #666;
-  opacity: 0.8;
-}
+/* ===================================== */
+/* DAY / NIGHT */
+/* ===================================== */
 
-/* Logo */
-#pageLogo {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  height: 120px;
-}
-
-/* Day/Night headers */
 .shift-header {
   cursor: pointer;
   text-align: center;
@@ -205,8 +207,8 @@ h1 {
   border: 0px solid #dee2e6;
   border-radius: 8px 8px 0 0;
   padding: 0;
-  height: 43px;       /* stała wysokość */
-  line-height: 40px;  /* pionowe wyśrodkowanie tekstu */
+  height: 43px;
+  line-height: 40px;
   margin-bottom: 0;
 }
 
@@ -221,7 +223,7 @@ h1 {
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid #dee2e6;
-  border-radius: 0 0 8px 8px; /* zaokrąglone dolne rogi */
+  border-radius: 0 0 8px 8px;
   table-layout: fixed;
 }
 
@@ -262,13 +264,12 @@ h1 {
   cursor: pointer;
 }
 
-/* Kontenery tabel */
+/* kontenery */
 #dayShiftContainer,
 #nightShiftContainer {
   flex: 1;
 }
 
-/* Wyśrodkowanie tabel w kontenerze */
 #shiftsContainer {
   display: flex;
   gap: 20px;
@@ -276,7 +277,7 @@ h1 {
   margin-top: 25px;
 }
 
-/* Ucinanie długiego tekstu w tabelach shift */
+/* ucinanie długiego tekstu */
 .shift-table th,
 .shift-table td {
   white-space: nowrap;
@@ -285,53 +286,77 @@ h1 {
 }
 
 .shift-table tbody tr.selected-for-delete td {
-  background-color: #f8d7da !important; /* jasny czerwony */
+  background-color: #f8d7da !important;
 }
 
-/* ================================ */
-/* PODSUMOWANIE – MIESIĄCE (Twoje) */
-/* ================================ */
 
-/* Kontener miesięcy */
+/* ===================================== */
+/* PODSUMOWANIE – KAFELKI (GRID) */
+/* ===================================== */
+
+/* Miesiące: 12 równych kafelków */
 #summaryMonthList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
 }
 
-/* Każdy miesiąc jako kafelek */
-.month-btn {
-  background-color: #f0f0f0;       /* szary domyślny */
-  border: 1px solid #ccc;          /* szare obramowanie */
+/* Kwartały: 4 kafelki (każdy = 3 miesiące) */
+#summaryQuarterList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+/* kafelki */
+.month-btn,
+.quarter-btn {
+  width: 100%;
+  min-width: 0 !important;
+  margin: 0 !important;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
   color: #333;
-  padding: 10px 15px;              /* większe kafelki */
-  border-radius: 8px !important;   /* zaokrąglenie */
+  padding: 10px 12px;
+  border-radius: 10px !important;
   cursor: pointer;
   font-weight: 600;
   text-align: center;
-  min-width: 75px;                 /* minimalna szerokość */
   transition: all 0.2s;
 }
 
-/* Hover efekt */
-.month-btn:hover {
+.month-btn:hover,
+.quarter-btn:hover {
   background-color: #b3d5f7;
   border-color: #999;
   color: #000;
 }
 
-/* Aktywny miesiąc */
-.month-btn.active {
+.month-btn.active,
+.quarter-btn.active {
   background-color: #db94ff !important;
   color: #fff !important;
   border: 1px solid #ffffff !important;
-  border-radius: 8px !important;
+  border-radius: 10px !important;
 }
 
-/* ================================ */
-/* TABELA PODSUMOWANIA – CLEAN */
-/* ================================ */
+/* responsywność kafelków */
+@media (max-width: 1200px) {
+  #summaryMonthList { grid-template-columns: repeat(6, 1fr); }
+  #summaryQuarterList { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+  #summaryMonthList { grid-template-columns: repeat(3, 1fr); }
+  #summaryQuarterList { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+/* ===================================== */
+/* PODSUMOWANIE – DUŻA TABELA (miesiąc) */
+/* ===================================== */
 
 #summaryTableContainer table {
   width: 100%;
@@ -351,7 +376,6 @@ h1 {
   border: none;
 }
 
-/* Zaokrąglenia nagłówka */
 #summaryTableContainer table thead th:first-child {
   border-top-left-radius: 8px;
 }
@@ -360,25 +384,23 @@ h1 {
   border-top-right-radius: 8px;
 }
 
-/* Komórki */
 #summaryTableContainer table tbody td {
   padding: 8px 12px;
   border: none;
   text-align: left;
 }
 
-/* Linie poziome */
+/* poziome */
 #summaryTableContainer table tbody tr td {
   border-top: 1px solid #dee2e6;
 }
 
-/* Linie pionowe */
+/* pionowe */
 #summaryTableContainer table th + th,
 #summaryTableContainer table td + td {
   border-left: 1px solid #dee2e6;
 }
 
-/* Zaokrąglenia dołu */
 #summaryTableContainer table tbody tr:last-child td:first-child {
   border-bottom-left-radius: 8px;
 }
@@ -387,7 +409,7 @@ h1 {
   border-bottom-right-radius: 8px;
 }
 
-/* Szerokości kolumn */
+/* szerokości */
 #summaryTableContainer th:nth-child(1),
 #summaryTableContainer td:nth-child(1) { width: 20%; }
 
@@ -400,96 +422,20 @@ h1 {
 #summaryTableContainer th:nth-child(4),
 #summaryTableContainer td:nth-child(4) { width: 25%; }
 
-/* ================================ */
-/* PODSUMOWANIE – KWARTAŁY (NOWE) */
-/* ================================ */
 
-#summaryQuarterList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-bottom: 8px;
-}
+/* ===================================== */
+/* PODSUMOWANIE – KWARTAŁ: 6 KART (3/2) */
+/* ===================================== */
 
-/* kafelki kwartalne */
-.quarter-btn {
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  color: #333;
-  padding: 10px 15px;
-  border-radius: 8px !important;
-  cursor: pointer;
-  font-weight: 600;
-  text-align: center;
-  min-width: 110px;
-  transition: all 0.2s;
-}
-
-.quarter-btn:hover {
-  background-color: #b3d5f7;
-  border-color: #999;
-  color: #000;
-}
-
-.quarter-btn.active {
-  background-color: #db94ff !important;
-  color: #fff !important;
-  border: 1px solid #ffffff !important;
-  border-radius: 8px !important;
-}
-
-/* kontener 6 tabel */
 #quarterTablesContainer {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(220px, 1fr));
   gap: 16px;
+  align-items: start;
 }
 
-/* karta tabeli */
-.quarter-table-card {
-  border: 1px solid #dee2e6;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #fff;
-}
-
-/* nagłówek tabeli (menago) */
-.quarter-table-header {
-  background-color: #b3d5f7;
-  font-weight: 650;
-  padding: 10px 12px;
-  text-align: center;
-}
-
-/* tabela mini */
-.quarter-mini-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  border: none;
-}
-
-.quarter-mini-table thead th {
-  background: #f3f3f3;
-  font-weight: 650;
-  border-bottom: 1px solid #dee2e6;
-}
-
-.quarter-mini-table td,
-.quarter-mini-table th {
-  border-left: none;
-  border-right: none;
-}
-
-.quarter-mini-table tbody tr td {
-  border-top: 1px solid #dee2e6;
-}
-
-/* pierwszy wiersz bez podwójnej linii */
-.quarter-mini-table tbody tr:first-child td {
-  border-top: none;
-}
-
-/* responsywność */
+/* responsywność kart */
 @media (max-width: 1100px) {
   #quarterTablesContainer {
     grid-template-columns: repeat(2, minmax(220px, 1fr));
@@ -502,103 +448,94 @@ h1 {
   }
 }
 
-/* ================================ */
-/* PODSUMOWANIE – UKŁAD: miesiące nad kwartałami (GRID) */
-/* ================================ */
-
-/* Rząd miesięcy: 12 równych kafelków */
-#summaryMonthList {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 10px;
-  margin-bottom: 16px;
+/* karta */
+.quarter-table-card {
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  overflow: hidden; /* kluczowe, żeby nic nie "dorysowało" dolnej linii */
+  background: #fff;
 }
 
-/* Rząd kwartałów: 4 kafelki, każdy = szerokość 3 miesięcy */
-#summaryQuarterList {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin-bottom: 18px;
-}
-
-/* Kafelki mają wypełniać komórkę siatki */
-.month-btn,
-.quarter-btn {
-  width: 100%;
-  min-width: 0 !important;   /* usuwa Twoje min-width */
-  margin: 0 !important;      /* usuwa m-1 z JS (nadpisujemy) */
+/* nagłówek karty */
+.quarter-table-header {
+  background-color: #b3d5f7;
+  font-weight: 650;
   padding: 10px 12px;
-  border-radius: 10px !important;
+  text-align: center;
 }
 
-/* Na mniejszych ekranach robimy łamanie, żeby nie było mikrokafelków */
-@media (max-width: 1200px) {
-  #summaryMonthList { grid-template-columns: repeat(6, 1fr); }
-  #summaryQuarterList { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 700px) {
-  #summaryMonthList { grid-template-columns: repeat(3, 1fr); }
-  #summaryQuarterList { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* ================================ */
-/* KWARTAŁ – styl jak tabela miesięczna */
-/* ================================ */
-
-/* mini tabela – reset ciężkich borderów */
+/* MINI TABELA – styl jak duża tabela + bez podwójnych borderów */
 .quarter-mini-table {
   width: 100%;
+  border: none !important;
   border-collapse: separate;
   border-spacing: 0;
-  border: none;
   table-layout: fixed;
+  margin: 0;
 }
 
-/* nagłówki kolumn */
+/* header tabelki */
 .quarter-mini-table thead th {
-  background-color: #f8f9fa;           /* dokładnie jak bootstrap */
+  background-color: #f8f9fa;
   font-weight: 600;
   color: #212529;
-  border-bottom: 1px solid #dee2e6;
-}
-
-/* komórki */
-.quarter-mini-table td,
-.quarter-mini-table th {
   padding: 8px 12px;
-  border-left: none;
-  border-right: none;
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom: 1px solid #dee2e6 !important;
 }
 
-/* linie poziome */
+/* cells */
+.quarter-mini-table td {
+  padding: 8px 12px;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  height: 36px;
+}
+
+/* separator poziomy między wierszami */
 .quarter-mini-table tbody tr td {
   border-top: 1px solid #dee2e6;
 }
 
-/* naprzemienne wiersze (biały / jasnoszary) */
-.quarter-mini-table tbody tr:nth-child(even) td {
-  background-color: #f8f9fa;
+/* pierwszy wiersz bez dodatkowej linii */
+.quarter-mini-table tbody tr:first-child td {
+  border-top: none;
 }
 
+/* zebra */
 .quarter-mini-table tbody tr:nth-child(odd) td {
   background-color: #ffffff;
 }
 
-/* wyrównanie kolumn */
-.quarter-mini-table td:nth-child(2),
-.quarter-mini-table th:nth-child(2) {
+.quarter-mini-table tbody tr:nth-child(even) td {
+  background-color: #f8f9fa;
+}
+
+/* kolumna Ilość na środku */
+.quarter-mini-table th:nth-child(2),
+.quarter-mini-table td:nth-child(2) {
   text-align: center;
+  width: 25%;
 }
 
-/* subtelny tekst dla "Brak danych" */
-.quarter-mini-table td {
-  height: 36px;
+.quarter-mini-table th:nth-child(1),
+.quarter-mini-table td:nth-child(1) {
+  width: 75%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.quarter-mini-table td em,
-.quarter-mini-table td[style*="opacity"] {
+/* NAJWAŻNIEJSZE: brak "ciemnej" linii na dole */
+.quarter-mini-table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* subtelny wygląd braków */
+.quarter-mini-table td[style*="opacity"],
+.quarter-mini-table td em {
   color: #6c757d;
 }
-
