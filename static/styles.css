@@ -488,3 +488,44 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/* ================================ */
+/* PODSUMOWANIE – UKŁAD: miesiące nad kwartałami (GRID) */
+/* ================================ */
+
+/* Rząd miesięcy: 12 równych kafelków */
+#summaryMonthList {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+/* Rząd kwartałów: 4 kafelki, każdy = szerokość 3 miesięcy */
+#summaryQuarterList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+/* Kafelki mają wypełniać komórkę siatki */
+.month-btn,
+.quarter-btn {
+  width: 100%;
+  min-width: 0 !important;   /* usuwa Twoje min-width */
+  margin: 0 !important;      /* usuwa m-1 z JS (nadpisujemy) */
+  padding: 10px 12px;
+  border-radius: 10px !important;
+}
+
+/* Na mniejszych ekranach robimy łamanie, żeby nie było mikrokafelków */
+@media (max-width: 1200px) {
+  #summaryMonthList { grid-template-columns: repeat(6, 1fr); }
+  #summaryQuarterList { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+  #summaryMonthList { grid-template-columns: repeat(3, 1fr); }
+  #summaryQuarterList { grid-template-columns: repeat(2, 1fr); }
+}
